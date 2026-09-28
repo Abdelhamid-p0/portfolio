@@ -8,19 +8,24 @@
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
+    "seed": "tsx prisma/seed.ts",
     "postinstall": "prisma skills sync || exit 0"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@types/node": "^26.6.3",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   },
   "dependencies": {
+    "@apollo/server": "^5.5.1",
+    "@prisma/adapter-pg": "^7.10.0",
     "@prisma/client": "^7.10.0",
-    "prisma": "^8.0.0-rc.17"
+    "graphql": "^16.14.2",
+    "pg": "^8.23.0",
+    "prisma": "^7.10.0"
   }
 }
