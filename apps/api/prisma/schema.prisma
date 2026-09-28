@@ -7,15 +7,74 @@ datasource db {
 }
 
 model Profile {
-  id        String   @id @default(cuid())
-  name      String
-  headline  String
-  bio       String
-  location  String?
-  avatarUrl String?
-  email     String?
-  githubUrl String?
+  id          String   @id @default(cuid())
+  name        String
+  headline    String
+  bio         String
+  location    String?
+  avatarUrl   String?
+  email       String?
+  githubUrl   String?
   linkedinUrl String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Project {
+  id          String      @id @default(cuid())
+  title       String
+  slug        String      @unique
+  description String
+  content     String?
+  imageUrl    String?
+  githubUrl   String?
+  liveUrl     String?
+  featured    Boolean     @default(false)
+  startDate   DateTime?
+  endDate     DateTime?
+  technologies Technology[]
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model Technology {
+  id       String    @id @default(cuid())
+  name     String
+  slug     String    @unique
+  iconUrl  String?
+  projects Project[]
+}
+
+model Experience {
+  id          String    @id @default(cuid())
+  company     String
+  role        String
+  slug        String    @unique
+  description String
+  startDate   DateTime
+  endDate     DateTime?
+  current     Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Post {
+  id            String   @id @default(cuid())
+  title         String
+  slug          String   @unique
+  excerpt       String?
+  content       String
+  coverImageUrl String?
+  published     Boolean  @default(false)
+  publishedAt   DateTime?
+  domains       Domain[]
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Domain {
+  id    String @id @default(cuid())
+  name  String
+  slug  String @unique
+  posts Post[]
 }
