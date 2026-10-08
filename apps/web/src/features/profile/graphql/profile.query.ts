@@ -6,7 +6,11 @@ export const GET_PROFILE = gql`
       id
       name
       headline
+      bio
       location
+      email
+      githubUrl
+      linkedinUrl
     }
   }
 `

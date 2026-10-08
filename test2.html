@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+
+<html class="light scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Abdelhamid Hachimi-Alaoui — Software Engineer</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #F7F5EF;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "chef-blue": "#4F86A3",
+            "chef-blue-dark": "#315F78",
+            "chef-blue-light": "#EAF2F6",
+            "chef-blue-tint": "#D3E4ED",
+            "morocco-terracotta": "#C98B62",
+            "morocco-terracotta-soft": "#FBF1EB",
+            "morocco-olive": "#78966F",
+            "morocco-olive-soft": "#EFF5EE",
+            "morocco-charcoal": "#263238",
+            "morocco-stone": "#D9DED9",
+            "morocco-stone-light": "#ECEFEA",
+            "morocco-paper": "#F7F5EF",
+            "morocco-slate": "#718087",
+            "morocco-muted": "#96A4A9",
+            "surface-white": "#FFFFFF",
+          },
+          fontFamily: {
+            "grotesk": ["Space Grotesk", "sans-serif"],
+            "mono": ["Space Mono", "monospace"],
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-morocco-paper text-morocco-charcoal font-grotesk min-h-screen flex flex-col justify-between selection:bg-chef-blue/20 selection:text-chef-blue-dark">
+<!-- NAVIGATION -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#F7F5EF]/90 backdrop-blur-md border-b border-morocco-stone">
+<div class="h-16 max-w-6xl mx-auto px-4 md:px-8 flex items-center justify-between gap-4">
+<div class="flex items-center gap-6">
+<a class="flex flex-col group" href="#top">
+<span class="font-grotesk text-base font-bold tracking-tight text-morocco-charcoal group-hover:text-chef-blue transition-colors uppercase">Abdelhamid Hachimi-Alaoui</span>
+<span class="font-mono text-[11px] tracking-wider text-morocco-slate uppercase">Software Engineer · Morocco</span>
+</a>
+<nav class="hidden md:flex items-center gap-6 ml-4">
+<a class="font-mono text-xs text-chef-blue-dark font-semibold border-b-2 border-chef-blue py-1 transition-colors" data-path="work" href="#work">Work</a>
+<a class="font-mono text-xs text-morocco-slate hover:text-chef-blue font-medium py-1 transition-colors" data-path="experience" href="#experience">Experience</a>
+<a class="font-mono text-xs text-morocco-slate hover:text-chef-blue font-medium py-1 transition-colors" data-path="writing" href="#writing">Writing</a>
+<a class="font-mono text-xs text-morocco-slate hover:text-chef-blue font-medium py-1 transition-colors" data-path="about" href="#about">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-3">
+<div class="hidden sm:flex items-center gap-2 px-2.5 py-1 rounded bg-morocco-olive-soft border border-morocco-olive/30">
+<span class="inline-block w-2 h-2 rounded-full bg-morocco-olive animate-pulse"></span>
+<span class="font-mono text-[11px] text-morocco-olive font-medium uppercase tracking-wider">Available for new roles</span>
+</div>
+<a class="font-mono text-xs uppercase tracking-wider text-white bg-chef-blue hover:bg-chef-blue-dark transition-all px-3.5 py-1.5 rounded shadow-sm hover:shadow" href="mailto:contact@abdelhamid.engineer">Let's talk</a>
+<div class="w-8 h-8 rounded-full bg-chef-blue-light border border-chef-blue/30 flex items-center justify-center shrink-0 text-chef-blue">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN BODY -->
+<main class="w-full pt-16 bg-morocco-paper flex-1" id="top">
+<div class="max-w-6xl mx-auto px-4 md:px-8 py-10">
+<div class="flex flex-col w-full">
+<!-- 00. HERO SECTION -->
+<section class="relative flex flex-col pt-6 pb-16 border-b border-morocco-stone overflow-hidden">
+<!-- Subtle Rif Mountains & Geometric Linework Motif -->
+<div class="absolute right-0 top-0 bottom-0 w-full md:w-1/2 pointer-events-none opacity-[0.14] select-none flex items-center justify-end">
+<svg class="w-full h-full max-h-[340px]" fill="none" viewbox="0 0 500 240" xmlns="http://www.w3.org/2000/svg">
+<!-- Mountain Silhouettes -->
+<path d="M40 220 L130 110 L190 170 L280 70 L380 190 L440 140 L500 220" stroke="#315F78" stroke-dasharray="3 3" stroke-width="1.2"></path>
+<path d="M0 230 L100 130 L160 180 L250 90 L340 170 L420 100 L500 210" stroke="#C98B62" stroke-width="1.5"></path>
+<!-- Moroccan 8-pointed geometric star motif -->
+<g transform="translate(370, 70)">
+<rect fill="none" height="42" stroke="#4F86A3" stroke-width="1.2" transform="rotate(45 21 21)" width="42" x="0" y="0"></rect>
+<rect fill="none" height="42" stroke="#C98B62" stroke-width="1.2" width="42" x="0" y="0"></rect>
+<circle cx="21" cy="21" fill="#4F86A3" r="3"></circle>
+</g>
+</svg>
+</div>
+<!-- Status Pill & Availability -->
+<div class="relative z-10 flex flex-wrap items-center gap-2.5 mb-8">
+<div class="flex items-center gap-2 px-2.5 py-1 bg-white border border-morocco-stone shadow-xs rounded">
+<span class="w-2 h-2 rounded-full bg-morocco-olive animate-pulse"></span>
+<span class="font-mono text-[11px] uppercase tracking-wider text-morocco-olive font-semibold">Available for new roles</span>
+</div>
+<span class="font-mono text-xs text-morocco-stone hidden sm:inline-block">◈</span>
+<div class="font-mono text-[11px] uppercase tracking-widest text-morocco-slate">
+              Software Engineer · Full-Stack · Generative AI
+            </div>
+</div>
+<!-- Main Headline -->
+<div class="relative z-10 max-w-3xl">
+<h1 class="font-grotesk text-4xl sm:text-5xl lg:text-6xl text-chef-blue-dark tracking-tight font-bold mb-6 leading-tight">
+              Building software.<br class="hidden sm:block"/>
+              Exploring what's next.
+            </h1>
+<p class="font-grotesk text-lg text-morocco-slate max-w-2xl mb-10 leading-relaxed font-normal">
+              I build software systems and AI-powered applications, with a focus on clean architecture, practical engineering, and continuous learning. Fresh software engineering graduate blending robust distributed backend systems with practical generative AI &amp; RAG pipelines.
+            </p>
+</div>
+<!-- Actions & Social Ledger -->
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pt-6 border-t border-morocco-stone/60">
+<div class="flex flex-wrap items-center gap-4">
+<a class="px-5 py-2.5 bg-chef-blue text-white font-mono text-xs uppercase tracking-wider font-semibold rounded shadow-sm hover:bg-chef-blue-dark transition-all duration-150 flex items-center gap-1.5" href="#work">
+<span>View my work</span>
+<span class="text-sm">→</span>
+</a>
+<a class="px-5 py-2.5 bg-white border border-morocco-stone text-morocco-charcoal hover:border-chef-blue hover:text-chef-blue transition-all duration-150 font-mono text-xs uppercase tracking-wider font-medium rounded shadow-xs" href="#writing">
+                Read my writing ↗
+              </a>
+</div>
+<!-- Compact Metas -->
+<div class="flex items-center gap-4 font-mono text-xs uppercase tracking-wider text-morocco-slate">
+<a class="hover:text-chef-blue transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">GitHub</a>
+<span class="text-morocco-stone">·</span>
+<a class="hover:text-chef-blue transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<span class="text-morocco-stone">·</span>
+<a class="hover:text-chef-blue transition-colors" href="mailto:contact@abdelhamid.engineer">Email</a>
+<span class="text-morocco-stone">·</span>
+<a class="hover:text-chef-blue text-morocco-charcoal transition-colors flex items-center gap-1" data-path="cv" href="#">
+<span>Resume / CV</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 01. CURRENTLY INVESTIGATING (Editorial Field Note) -->
+<section class="py-8 border-b border-morocco-stone">
+<div class="bg-white border border-morocco-stone rounded shadow-xs p-6 flex flex-col md:flex-row gap-6 md:items-center justify-between">
+<div class="flex flex-col gap-1.5 md:max-w-md">
+<div class="flex items-center gap-2 font-mono text-xs font-semibold text-chef-blue uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">biotech</span>
+<span>Engineering Field Note // Currently Investigating</span>
+</div>
+<p class="font-grotesk text-sm text-morocco-slate leading-relaxed">
+                Deterministic evaluation for multi-stage RAG pipelines and low-latency Kafka streaming patterns under variable network partitions.
+              </p>
+</div>
+<div class="flex flex-wrap gap-2 items-center max-w-xl">
+<span class="px-2.5 py-1 bg-morocco-paper border border-morocco-stone font-mono text-[11px] text-morocco-charcoal rounded">Generative AI · RAG</span>
+<span class="px-2.5 py-1 bg-morocco-paper border border-morocco-stone font-mono text-[11px] text-morocco-charcoal rounded">Spec-Driven Dev</span>
+<span class="px-2.5 py-1 bg-morocco-paper border border-morocco-stone font-mono text-[11px] text-morocco-charcoal rounded">Event-Driven</span>
+<span class="px-2.5 py-1 bg-morocco-paper border border-morocco-stone font-mono text-[11px] text-morocco-charcoal rounded">AI-Assisted Eng</span>
+<span class="px-2.5 py-1 bg-morocco-paper border border-morocco-stone font-mono text-[11px] text-morocco-charcoal rounded">Distributed Systems</span>
+</div>
+</div>
+</section>
+<!-- 02. SELECTED WORK SECTION -->
+<section class="py-14 border-b border-morocco-stone scroll-mt-20" id="work">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-3">
+<div>
+<div class="font-mono text-xs text-morocco-terracotta tracking-widest uppercase mb-1">01 / SELECTED WORK ─── ◈ ───</div>
+<h2 class="font-grotesk text-3xl text-chef-blue-dark tracking-tight font-bold">Selected work</h2>
+</div>
+<p class="font-grotesk text-sm text-morocco-slate max-w-md">
+              A few projects and technical experiments I've designed, engineered, benchmarked, and deployed.
+            </p>
+</div>
+<!-- Project Matrix (2x2 Grid) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<!-- Project 1: AI Educational Platform -->
+<article class="flex flex-col bg-white border border-morocco-stone rounded shadow-xs hover:shadow-md hover:border-chef-blue/60 transition-all duration-200">
+<div class="px-6 py-3 border-b border-morocco-stone/70 bg-morocco-paper/60 rounded-t flex items-center justify-between font-mono text-xs">
+<span class="text-morocco-slate">PROJECT 01 · RAG SYSTEM</span>
+<span class="text-morocco-terracotta font-semibold">2025</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-4 mb-3">
+<h3 class="font-grotesk text-xl text-morocco-charcoal font-bold">AI Educational Platform</h3>
+<span class="px-2.5 py-0.5 bg-morocco-olive-soft text-morocco-olive font-mono text-[11px] font-semibold uppercase tracking-wider rounded border border-morocco-olive/30">Featured</span>
+</div>
+<p class="font-grotesk text-sm text-morocco-slate mb-4 leading-relaxed">
+                    An AI-powered platform helping educational content managers review, improve and generate curriculum units with granular context grounding.
+                  </p>
+<!-- Inline Architecture Flow Diagram -->
+<div class="bg-morocco-paper border border-morocco-stone p-3.5 rounded mb-5">
+<div class="font-mono text-[11px] text-morocco-slate uppercase tracking-wider mb-2 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-chef-blue">account_tree</span>
+<span>System Pipeline Topology</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
+<span class="px-2 py-0.5 bg-white border border-morocco-stone text-morocco-charcoal rounded">React UI</span>
+<span class="text-morocco-stone">→</span>
+<span class="px-2 py-0.5 bg-white border border-morocco-stone text-chef-blue font-medium rounded">Spring Boot Gateway</span>
+<span class="text-morocco-stone">→</span>
+<span class="px-2 py-0.5 bg-white border border-morocco-stone text-morocco-olive font-medium rounded">Retriever (Hybrid)</span>
+<span class="text-morocco-stone">→</span>
+<span class="px-2 py-0.5 bg-white border border-morocco-stone text-morocco-terracotta font-medium rounded">pgvector</span>
+<span class="text-morocco-stone">→</span>
+<span class="px-2 py-0.5 bg-white border border-morocco-stone text-chef-blue-dark font-semibold rounded">LLM Synthesis</span>
+</div>
+</div>
+<!-- Tags -->
+<div class="flex flex-wrap gap-1.5 mb-5 font-mono text-[11px]">
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">React</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">TypeScript</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Spring Boot (Java 21)</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">PostgreSQL</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">pgvector</span>
+<span class="px-2 py-0.5 bg-chef-blue-light border border-chef-blue/30 text-chef-blue-dark font-medium rounded">RAG Pipeline</span>
+</div>
+</div>
+<div class="pt-4 border-t border-morocco-stone/60 flex flex-wrap items-center justify-between gap-3 font-mono text-xs uppercase tracking-wider">
+<button class="text-chef-blue hover:text-chef-blue-dark font-semibold flex items-center gap-1 transition-colors" onclick="document.getElementById('deep-dive-study').scrollIntoView({behavior: 'smooth'})">
+<span>Deep-Dive Case Study</span>
+<span class="material-symbols-outlined text-[15px]">expand_more</span>
+</button>
+<div class="flex items-center gap-3 text-morocco-slate">
+<a class="hover:text-chef-blue transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">GitHub Repo ↗</a>
+<span class="text-morocco-stone">·</span>
+<a class="hover:text-chef-blue transition-colors" href="#">Demo Spec ↗</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 2: Kafka Consumer Optimization -->
+<article class="flex flex-col bg-white border border-morocco-stone rounded shadow-xs hover:shadow-md hover:border-chef-blue/60 transition-all duration-200">
+<div class="px-6 py-3 border-b border-morocco-stone/70 bg-morocco-paper/60 rounded-t flex items-center justify-between font-mono text-xs">
+<span class="text-morocco-slate">PROJECT 02 · EVENT STREAMING</span>
+<span class="text-morocco-terracotta font-semibold">2025</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-4 mb-3">
+<h3 class="font-grotesk text-xl text-morocco-charcoal font-bold">Kafka Consumer Optimization</h3>
+<span class="px-2.5 py-0.5 bg-morocco-olive-soft text-morocco-olive font-mono text-[11px] font-semibold uppercase tracking-wider rounded border border-morocco-olive/30">+4.2x Throughput</span>
+</div>
+<p class="font-grotesk text-sm text-morocco-slate mb-4 leading-relaxed">
+                    Production-grade proof-of-concept focused on improving invoice-processing reliability, mitigating consumer group head-of-line blocking, and leveraging Debezium CDC for idempotent event distribution.
+                  </p>
+<div class="bg-morocco-paper border border-morocco-stone p-3.5 rounded mb-5 font-mono text-xs">
+<div class="flex justify-between items-center text-morocco-slate text-[11px] mb-2">
+<span class="font-semibold text-morocco-charcoal">BENCHMARK: CONSUMER LAG MITIGATION</span>
+<span class="text-morocco-olive font-bold">-38% P99 LATENCY</span>
+</div>
+<div class="w-full bg-morocco-stone-light h-2 rounded-full overflow-hidden border border-morocco-stone">
+<div class="bg-morocco-olive h-full w-[82%] rounded-full"></div>
+</div>
+</div>
+<!-- Tags -->
+<div class="flex flex-wrap gap-1.5 mb-5 font-mono text-[11px]">
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Java 21</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Apache Kafka</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Debezium CDC</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">PostgreSQL</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Docker</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Prometheus</span>
+</div>
+</div>
+<div class="pt-4 border-t border-morocco-stone/60 flex flex-wrap items-center justify-between gap-3 font-mono text-xs uppercase tracking-wider">
+<a class="text-chef-blue hover:text-chef-blue-dark font-semibold flex items-center gap-1 transition-colors" href="#writing">
+<span>Read Architecture Post</span>
+<span class="material-symbols-outlined text-[15px]">article</span>
+</a>
+<div class="flex items-center gap-3 text-morocco-slate">
+<a class="hover:text-chef-blue transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
+<span class="text-morocco-stone">·</span>
+<a class="hover:text-chef-blue transition-colors" href="#">Benchmark Report ↗</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 3: ENSAK EVENT Platform -->
+<article class="flex flex-col bg-white border border-morocco-stone rounded shadow-xs hover:shadow-md hover:border-chef-blue/60 transition-all duration-200">
+<div class="px-6 py-3 border-b border-morocco-stone/70 bg-morocco-paper/60 rounded-t flex items-center justify-between font-mono text-xs">
+<span class="text-morocco-slate">PROJECT 03 · CONCURRENT PLATFORM</span>
+<span class="text-morocco-terracotta font-semibold">2024</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-4 mb-3">
+<h3 class="font-grotesk text-xl text-morocco-charcoal font-bold">ENSAK EVENT — Campus Platform</h3>
+<span class="px-2.5 py-0.5 bg-morocco-paper text-morocco-charcoal font-mono text-[11px] font-semibold uppercase tracking-wider rounded border border-morocco-stone">3k+ Users</span>
+</div>
+<p class="font-grotesk text-sm text-morocco-slate mb-4 leading-relaxed">
+                    Comprehensive campus event lifecycle management platform with real-time dynamic QR ticket validation, JWT access delegation, and Redis cached seat leases.
+                  </p>
+<div class="flex flex-wrap gap-1.5 mb-5 font-mono text-[11px]">
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Spring Boot</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Angular</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">PostgreSQL</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Redis</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">JWT</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Tailwind CSS</span>
+</div>
+</div>
+<div class="pt-4 border-t border-morocco-stone/60 flex flex-wrap items-center justify-between gap-3 font-mono text-xs uppercase tracking-wider">
+<span class="text-morocco-slate font-medium">Production Verified · 3,000+ Students</span>
+<div class="flex items-center gap-3 text-morocco-slate">
+<a class="hover:text-chef-blue transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
+<span class="text-morocco-stone">·</span>
+<a class="hover:text-chef-blue transition-colors" href="#">Architecture Overview ↗</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 4: JobInsight -->
+<article class="flex flex-col bg-white border border-morocco-stone rounded shadow-xs hover:shadow-md hover:border-chef-blue/60 transition-all duration-200">
+<div class="px-6 py-3 border-b border-morocco-stone/70 bg-morocco-paper/60 rounded-t flex items-center justify-between font-mono text-xs">
+<span class="text-morocco-slate">PROJECT 04 · VECTOR SEMANTICS</span>
+<span class="text-morocco-terracotta font-semibold">2024</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-4 mb-3">
+<h3 class="font-grotesk text-xl text-morocco-charcoal font-bold">JobInsight — AI Career Engine</h3>
+<span class="px-2.5 py-0.5 bg-morocco-paper text-morocco-charcoal font-mono text-[11px] font-semibold uppercase tracking-wider rounded border border-morocco-stone">Embedding Search</span>
+</div>
+<p class="font-grotesk text-sm text-morocco-slate mb-4 leading-relaxed">
+                    Semantic search engine and automated resume alignment system leveraging OpenAI embeddings and Qdrant to match engineering candidates against multi-dimensional JD criteria.
+                  </p>
+<div class="flex flex-wrap gap-1.5 mb-5 font-mono text-[11px]">
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Python</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">FastAPI</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">React</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">OpenAI Embeddings</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Qdrant</span>
+<span class="px-2 py-0.5 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Docker</span>
+</div>
+</div>
+<div class="pt-4 border-t border-morocco-stone/60 flex flex-wrap items-center justify-between gap-3 font-mono text-xs uppercase tracking-wider">
+<span class="text-morocco-slate font-medium">HNSW Indexing · Cosine Similarity</span>
+<div class="flex items-center gap-3 text-morocco-slate">
+<a class="hover:text-chef-blue transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
+<span class="text-morocco-stone">·</span>
+<a class="hover:text-chef-blue transition-colors" href="#">Demo Walkthrough ↗</a>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- 03. CASE STUDY SPOTLIGHT (Architectural Craftsmanship Frame) -->
+<section class="py-14 border-b border-morocco-stone scroll-mt-20" id="deep-dive-study">
+<div class="border border-morocco-stone bg-white rounded-t-2xl rounded-b-lg shadow-sm p-6 lg:p-10 relative">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-morocco-stone">
+<div>
+<span class="font-mono text-xs text-morocco-terracotta uppercase tracking-widest font-semibold">[ ARCHITECTURAL CASE STUDY // 9-PART SYSTEM SPEC ]</span>
+<h2 class="font-grotesk text-2xl lg:text-3xl text-chef-blue-dark tracking-tight font-bold mt-1">
+                  AI Educational Platform (Deep-Dive)
+                </h2>
+</div>
+<div class="flex items-center gap-2 font-mono text-xs text-morocco-slate">
+<span class="w-2.5 h-2.5 rounded-full bg-morocco-olive"></span>
+<span>SYSTEM SPECIFICATION · REV 2.4</span>
+</div>
+</div>
+<!-- 9-Part Systematic Manifest -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
+<!-- 01 Context -->
+<div class="flex flex-col border-l-2 border-chef-blue/40 pl-4">
+<span class="font-mono text-xs text-chef-blue-dark font-semibold uppercase tracking-wider mb-1.5">01 — Context</span>
+<p class="font-grotesk text-sm text-morocco-slate leading-relaxed">
+                  Higher-ed curriculum coordinators manage dense syllabi across hundreds of dynamic modular disciplines. Manual quality reviews created bottlenecks of up to 4 weeks per semester update cycle.
+                </p>
+</div>
+<!-- 02 Problem -->
+<div class="flex flex-col border-l-2 border-chef-blue/40 pl-4">
+<span class="font-mono text-xs text-chef-blue-dark font-semibold uppercase tracking-wider mb-1.5">02 — Problem</span>
+<p class="font-grotesk text-sm text-morocco-slate leading-relaxed">
+                  Off-the-shelf generative models suffer from catastrophic hallucination when referencing institutional course prerequisites, historical lecture notes, and regional accreditation mandates.
+                </p>
+</div>
+<!-- 03 Approach -->
+<div class="flex flex-col border-l-2 border-chef-blue/40 pl-4">
+<span class="font-mono text-xs text-chef-blue-dark font-semibold uppercase tracking-wider mb-1.5">03 — Approach</span>
+<p class="font-grotesk text-sm text-morocco-slate leading-relaxed">
+                  Engineered an isolated RAG architecture running inside the existing relational boundary using PostgreSQL and pgvector, coupling semantic embeddings with BM25 keyword matching for high-precision recall.
+                </p>
+</div>
+<!-- 04 Architecture -->
+<div class="flex flex-col border-l-2 border-chef-blue/40 pl-4">
+<span class="font-mono text-xs text-chef-blue-dark font-semibold uppercase tracking-wider mb-1.5">04 — Architecture</span>
+<p class="font-grotesk text-sm text-morocco-slate leading-relaxed">
+                  Asynchronous ingestion pipeline splitting PDF/Markdown resources into recursive semantic chunks with sliding overlaps (512 tokens with 64-token overlap), stored with relational foreign keys.
+                </p>
+</div>
+<!-- 05 Technical Decisions -->
+<div class="flex flex-col border-l-2 border-chef-blue/40 pl-4">
+<span class="font-mono text-xs text-chef-blue-dark font-semibold uppercase tracking-wider mb-1.5">05 — Technical Decisions</span>
+<p class="font-grotesk text-sm text-morocco-slate leading-relaxed">
+                  Selected pgvector over standalone vector DBs (Pinecone/Milvus) to preserve transactional ACID guarantees and avoid synchronization drifts between user permissions and chunk records.
+                </p>
+</div>
+<!-- 06 Challenges -->
+<div class="flex flex-col border-l-2 border-chef-blue/40 pl-4">
+<span class="font-mono text-xs text-chef-blue-dark font-semibold uppercase tracking-wider mb-1.5">06 — Challenges</span>
+<p class="font-grotesk text-sm text-morocco-slate leading-relaxed">
+                  Balancing context window saturation with LLM inference latency. Solved by implementing dynamic re-ranking via reciprocal rank fusion (RRF), discarding candidate passages below 0.78 similarity.
+                </p>
+</div>
+<!-- 07 What I Learned -->
+<div class="flex flex-col border-l-2 border-chef-blue/40 pl-4">
+<span class="font-mono text-xs text-chef-blue-dark font-semibold uppercase tracking-wider mb-1.5">07 — What I Learned</span>
+<p class="font-grotesk text-sm text-morocco-slate leading-relaxed">
+                  Chunking heuristics outweigh model parameter size. A 7B parameter model fed meticulously chunked and ranked context consistently outperformed raw 70B zero-shot completions.
+                </p>
+</div>
+<!-- 08 Results -->
+<div class="flex flex-col border-l-2 border-morocco-terracotta pl-4 bg-morocco-terracotta-soft/70 p-3 rounded">
+<span class="font-mono text-xs text-morocco-terracotta uppercase tracking-wider font-bold mb-1">08 — Verified Results</span>
+<div class="font-grotesk text-3xl text-morocco-terracotta font-bold mb-1">-85%</div>
+<p class="font-grotesk text-xs text-morocco-charcoal leading-relaxed font-medium">
+                  Reduction in content review cycles. Factual verification score reached 96.4% in blinded trials against human domain experts.
+                </p>
+</div>
+<!-- 09 Links & Code -->
+<div class="flex flex-col border-l-2 border-chef-blue/40 pl-4">
+<span class="font-mono text-xs text-chef-blue-dark font-semibold uppercase tracking-wider mb-1.5">09 — Verification</span>
+<p class="font-grotesk text-sm text-morocco-slate mb-3 leading-relaxed">
+                  Architecture review, Docker Compose topology, and synthetic evaluation harness:
+                </p>
+<div class="flex flex-col gap-2 font-mono text-xs uppercase font-medium">
+<a class="text-chef-blue hover:text-chef-blue-dark transition-colors flex items-center gap-1.5" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>› Repository Source</span>
+<span class="material-symbols-outlined text-[14px]">code</span>
+</a>
+<a class="text-chef-blue hover:text-chef-blue-dark transition-colors flex items-center gap-1.5" href="#">
+<span>› Evaluation Harness Spec</span>
+<span class="material-symbols-outlined text-[14px]">description</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 04. EXPERIENCE SECTION -->
+<section class="py-14 border-b border-morocco-stone scroll-mt-20" id="experience">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-3">
+<div>
+<div class="font-mono text-xs text-morocco-terracotta tracking-widest uppercase mb-1">02 / BACKGROUND ─── ◈ ───</div>
+<h2 class="font-grotesk text-3xl text-chef-blue-dark tracking-tight font-bold">Experience</h2>
+</div>
+<p class="font-grotesk text-sm text-morocco-slate max-w-md">
+              Professional internships, software engineering responsibilities, and distributed backend achievements.
+            </p>
+</div>
+<!-- Timeline items -->
+<div class="flex flex-col divide-y divide-morocco-stone border-y border-morocco-stone">
+<!-- Entry 1: Cegedim -->
+<div class="py-8 flex flex-col lg:flex-row gap-6">
+<div class="w-full lg:w-48 shrink-0">
+<div class="font-mono text-xs font-semibold text-chef-blue uppercase">2025 (4 MOS)</div>
+<div class="font-mono text-[11px] text-morocco-slate uppercase tracking-wider mt-1">Internship</div>
+</div>
+<div class="flex-1">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
+<h3 class="font-grotesk text-xl text-morocco-charcoal font-bold">
+                    Software Engineering Intern <span class="text-morocco-slate font-normal">@</span> Cegedim
+                  </h3>
+<span class="font-mono text-xs text-morocco-slate">Rabat / Casablanca</span>
+</div>
+<p class="font-grotesk text-sm text-morocco-slate mb-4 leading-relaxed">
+                  Production-focused initiative targeting high-throughput invoice and medical claim stream processing using Apache Kafka and Change Data Capture pipelines.
+                </p>
+<ul class="space-y-2 font-grotesk text-sm text-morocco-charcoal">
+<li class="flex items-start gap-2">
+<span class="text-chef-blue font-bold font-mono">◈</span>
+<span>Analyzed consumer lag bottlenecks across Kafka topic partitions; tuned batch fetching parameters (<code class="font-mono text-xs bg-morocco-stone-light px-1 py-0.5 rounded">fetch.min.bytes</code> and <code class="font-mono text-xs bg-morocco-stone-light px-1 py-0.5 rounded">max.poll.records</code>), improving overall consumer throughput by 4.2x.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-chef-blue font-bold font-mono">◈</span>
+<span>Architected and integrated Debezium CDC connectors with PostgreSQL to build zero-data-loss audit trails and real-time reconciliation logs.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-chef-blue font-bold font-mono">◈</span>
+<span>Lowered end-to-end message processing P99 latency by 38% while eliminating transient out-of-order execution states.</span>
+</li>
+</ul>
+<div class="flex flex-wrap gap-1.5 mt-5 font-mono text-[11px]">
+<span class="px-2 py-0.5 bg-white border border-morocco-stone text-morocco-charcoal rounded">Java 21</span>
+<span class="px-2 py-0.5 bg-white border border-morocco-stone text-morocco-charcoal rounded">Apache Kafka</span>
+<span class="px-2 py-0.5 bg-white border border-morocco-stone text-morocco-charcoal rounded">Debezium CDC</span>
+<span class="px-2 py-0.5 bg-white border border-morocco-stone text-morocco-charcoal rounded">Docker</span>
+<span class="px-2 py-0.5 bg-white border border-morocco-stone text-morocco-charcoal rounded">Prometheus</span>
+</div>
+</div>
+</div>
+<!-- Entry 2: TNA Consulting -->
+<div class="py-8 flex flex-col lg:flex-row gap-6">
+<div class="w-full lg:w-48 shrink-0">
+<div class="font-mono text-xs font-semibold text-morocco-slate uppercase">2024 (3 MOS)</div>
+<div class="font-mono text-[11px] text-morocco-slate uppercase tracking-wider mt-1">Internship</div>
+</div>
+<div class="flex-1">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
+<h3 class="font-grotesk text-xl text-morocco-charcoal font-bold">
+                    Full-Stack Developer Intern <span class="text-morocco-slate font-normal">@</span> TNA Consulting
+                  </h3>
+<span class="font-mono text-xs text-morocco-slate">Casablanca</span>
+</div>
+<p class="font-grotesk text-sm text-morocco-slate mb-4 leading-relaxed">
+                  Angular enterprise client platform development, modular reusable component engineering, and frontend legacy refactoring.
+                </p>
+<ul class="space-y-2 font-grotesk text-sm text-morocco-charcoal">
+<li class="flex items-start gap-2">
+<span class="text-chef-blue font-bold font-mono">◈</span>
+<span>Engineered reusable design tokens and responsive UI components in Angular, adhering to strict design system guidelines and WCAG standards.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-chef-blue font-bold font-mono">◈</span>
+<span>Refactored critical client dashboard routes and lazy-loaded heavy dependencies, cutting initial JS bundle weight by 24%.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-chef-blue font-bold font-mono">◈</span>
+<span>Wrote automated unit testing suites in Jasmine/Karma, elevating frontend module test coverage above 82%.</span>
+</li>
+</ul>
+<div class="flex flex-wrap gap-1.5 mt-5 font-mono text-[11px]">
+<span class="px-2 py-0.5 bg-white border border-morocco-stone text-morocco-charcoal rounded">Angular</span>
+<span class="px-2 py-0.5 bg-white border border-morocco-stone text-morocco-charcoal rounded">TypeScript</span>
+<span class="px-2 py-0.5 bg-white border border-morocco-stone text-morocco-charcoal rounded">Tailwind CSS</span>
+<span class="px-2 py-0.5 bg-white border border-morocco-stone text-morocco-charcoal rounded">REST APIs</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Future Outlook Bar -->
+<div class="mt-6 p-4 bg-white border border-morocco-stone rounded shadow-xs flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-morocco-olive text-[22px]">explore</span>
+<span class="font-grotesk text-sm text-morocco-charcoal font-medium">
+                Open to Full-Stack and AI Engineering roles worldwide (Remote / Hybrid / On-site).
+              </span>
+</div>
+<a class="font-mono text-xs uppercase tracking-wider text-chef-blue hover:text-chef-blue-dark font-semibold hidden sm:inline-block" href="mailto:contact@abdelhamid.engineer">
+              Inquire Availability →
+            </a>
+</div>
+</section>
+<!-- 05. WRITING / TECHNICAL JOURNAL SECTION -->
+<section class="py-14 border-b border-morocco-stone scroll-mt-20" id="writing">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-3">
+<div>
+<div class="font-mono text-xs text-morocco-terracotta tracking-widest uppercase mb-1">03 / WRITING &amp; NOTES ─── ◈ ───</div>
+<h2 class="font-grotesk text-3xl text-chef-blue-dark tracking-tight font-bold">Engineering Notes</h2>
+</div>
+<p class="font-grotesk text-sm text-morocco-slate max-w-md">
+              Things I build, break, learn and rethink. Thoughtful engineering notes over generic tutorials.
+            </p>
+</div>
+<!-- Filter Bar Tabs -->
+<div class="flex flex-wrap gap-2 mb-8 border-b border-morocco-stone pb-3" id="article-filters">
+<button class="filter-btn px-3 py-1 font-mono text-xs uppercase tracking-wider bg-chef-blue text-white font-bold rounded shadow-xs" data-filter="all">
+              All (5)
+            </button>
+<button class="filter-btn px-3 py-1 font-mono text-xs uppercase tracking-wider text-morocco-slate hover:text-morocco-charcoal hover:bg-white rounded transition-colors" data-filter="genai">
+              Generative AI (2)
+            </button>
+<button class="filter-btn px-3 py-1 font-mono text-xs uppercase tracking-wider text-morocco-slate hover:text-morocco-charcoal hover:bg-white rounded transition-colors" data-filter="backend">
+              Backend &amp; Architecture (2)
+            </button>
+<button class="filter-btn px-3 py-1 font-mono text-xs uppercase tracking-wider text-morocco-slate hover:text-morocco-charcoal hover:bg-white rounded transition-colors" data-filter="experiments">
+              Experiments (1)
+            </button>
+</div>
+<!-- Article Ledger Entries -->
+<div class="flex flex-col divide-y divide-morocco-stone border-y border-morocco-stone" id="article-list">
+<!-- Article 1 -->
+<article class="article-item py-6 group hover:bg-white/80 transition-colors px-4 -mx-4 rounded cursor-pointer" data-category="genai">
+<div class="flex flex-col md:flex-row md:items-baseline justify-between gap-1 mb-1.5">
+<div class="flex items-center gap-3">
+<span class="font-mono text-xs text-morocco-slate">JAN 2025</span>
+<span class="font-mono text-[11px] text-morocco-olive uppercase tracking-wider px-2 py-0.5 bg-morocco-olive-soft border border-morocco-olive/30 rounded font-semibold">Generative AI</span>
+</div>
+<span class="font-mono text-xs text-morocco-slate">7 MIN READ</span>
+</div>
+<h3 class="font-grotesk text-lg text-morocco-charcoal group-hover:text-chef-blue font-bold transition-colors mb-1.5">
+                Building a RAG system with Spring Boot, PostgreSQL and pgvector
+              </h3>
+<p class="font-grotesk text-sm text-morocco-slate leading-relaxed">
+                Why we chose pgvector inside our existing relational database instead of spinning up an external vector cluster, and how hybrid keyword-plus-dense retrieval preserved domain accuracy.
+              </p>
+</article>
+<!-- Article 2 -->
+<article class="article-item py-6 group hover:bg-white/80 transition-colors px-4 -mx-4 rounded cursor-pointer" data-category="backend">
+<div class="flex flex-col md:flex-row md:items-baseline justify-between gap-1 mb-1.5">
+<div class="flex items-center gap-3">
+<span class="font-mono text-xs text-morocco-slate">NOV 2024</span>
+<span class="font-mono text-[11px] text-chef-blue-dark uppercase tracking-wider px-2 py-0.5 bg-chef-blue-light border border-chef-blue/30 rounded font-semibold">Backend</span>
+</div>
+<span class="font-mono text-xs text-morocco-slate">9 MIN READ</span>
+</div>
+<h3 class="font-grotesk text-lg text-morocco-charcoal group-hover:text-chef-blue font-bold transition-colors mb-1.5">
+                Optimizing a Kafka Consumer: what actually made the difference?
+              </h3>
+<p class="font-grotesk text-sm text-morocco-slate leading-relaxed">
+                Profiling thread pool contention, consumer group rebalancing frequency, and tuning fetch.min.bytes under realistic batch payloads.
+              </p>
+</article>
+<!-- Article 3 -->
+<article class="article-item py-6 group hover:bg-white/80 transition-colors px-4 -mx-4 rounded cursor-pointer" data-category="backend">
+<div class="flex flex-col md:flex-row md:items-baseline justify-between gap-1 mb-1.5">
+<div class="flex items-center gap-3">
+<span class="font-mono text-xs text-morocco-slate">SEP 2024</span>
+<span class="font-mono text-[11px] text-chef-blue-dark uppercase tracking-wider px-2 py-0.5 bg-chef-blue-light border border-chef-blue/30 rounded font-semibold">Architecture</span>
+</div>
+<span class="font-mono text-xs text-morocco-slate">6 MIN READ</span>
+</div>
+<h3 class="font-grotesk text-lg text-morocco-charcoal group-hover:text-chef-blue font-bold transition-colors mb-1.5">
+                From CRUD to AI: structuring an AI-powered Spring Boot application
+              </h3>
+<p class="font-grotesk text-sm text-morocco-slate leading-relaxed">
+                Patterns for decoupling prompt templates, vector embeddings, and fallback model providers in modular enterprise services.
+              </p>
+</article>
+<!-- Article 4 -->
+<article class="article-item py-6 group hover:bg-white/80 transition-colors px-4 -mx-4 rounded cursor-pointer" data-category="experiments">
+<div class="flex flex-col md:flex-row md:items-baseline justify-between gap-1 mb-1.5">
+<div class="flex items-center gap-3">
+<span class="font-mono text-xs text-morocco-slate">JUL 2024</span>
+<span class="font-mono text-[11px] text-morocco-terracotta uppercase tracking-wider px-2 py-0.5 bg-morocco-terracotta-soft border border-morocco-terracotta/30 rounded font-semibold">Experiments</span>
+</div>
+<span class="font-mono text-xs text-morocco-slate">5 MIN READ</span>
+</div>
+<h3 class="font-grotesk text-lg text-morocco-charcoal group-hover:text-chef-blue font-bold transition-colors mb-1.5">
+                What I learned from using Spec-Driven Development
+              </h3>
+<p class="font-grotesk text-sm text-morocco-slate leading-relaxed">
+                Using OpenAPI contracts as the single source of truth between frontend and backend to eliminate integration drift and mock drift.
+              </p>
+</article>
+<!-- Article 5 -->
+<article class="article-item py-6 group hover:bg-white/80 transition-colors px-4 -mx-4 rounded cursor-pointer" data-category="genai">
+<div class="flex flex-col md:flex-row md:items-baseline justify-between gap-1 mb-1.5">
+<div class="flex items-center gap-3">
+<span class="font-mono text-xs text-morocco-slate">MAY 2024</span>
+<span class="font-mono text-[11px] text-morocco-olive uppercase tracking-wider px-2 py-0.5 bg-morocco-olive-soft border border-morocco-olive/30 rounded font-semibold">Generative AI</span>
+</div>
+<span class="font-mono text-xs text-morocco-slate">8 MIN READ</span>
+</div>
+<h3 class="font-grotesk text-lg text-morocco-charcoal group-hover:text-chef-blue font-bold transition-colors mb-1.5">
+                Lessons from building an educational GenAI platform
+              </h3>
+<p class="font-grotesk text-sm text-morocco-slate leading-relaxed">
+                Handling non-deterministic LLM outputs in production, implementing guardrails, and building reliable deterministic evaluation loops.
+              </p>
+</article>
+</div>
+</section>
+<!-- 06. ABOUT SECTION -->
+<section class="py-14 border-b border-morocco-stone scroll-mt-20" id="about">
+<div class="font-mono text-xs text-morocco-terracotta tracking-widest uppercase mb-1">04 / PERSPECTIVE ─── ◈ ───</div>
+<h2 class="font-grotesk text-3xl text-chef-blue-dark tracking-tight font-bold mb-8">About</h2>
+<div class="max-w-4xl space-y-4 mb-10">
+<p class="font-grotesk text-lg text-morocco-charcoal leading-relaxed">
+              I'm a software engineer grounded in Morocco and building for the global web. I enjoy understanding how complex systems operate from the silicon up, crafting clean software architectures, and turning challenging technical problems into reliable, well-tested solutions.
+            </p>
+<p class="font-grotesk text-base text-morocco-slate leading-relaxed">
+              My engineering focus lives at the convergence of backend systems and Generative AI — spanning high-concurrency event-driven architectures, low-latency streaming pipelines, and production-grade RAG solutions. I treat code with the intentionality of Moroccan craftsmanship: durable, balanced, and built to stand the test of time.
+            </p>
+</div>
+<!-- Two-column Sub-Layout: Interests & Core Principles -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Sub-panel 1 -->
+<div class="p-6 bg-white border border-morocco-stone rounded shadow-xs">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-chef-blue text-[20px]">hub</span>
+<h3 class="font-grotesk text-base text-chef-blue-dark font-bold uppercase tracking-wider">Currently interested in</h3>
+</div>
+<ul class="space-y-2 font-grotesk text-sm text-morocco-charcoal">
+<li class="flex items-center gap-2.5">
+<span class="text-chef-blue font-bold font-mono">◈</span>
+<span>Software Architecture &amp; Clean Code</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="text-chef-blue font-bold font-mono">◈</span>
+<span>Full-Stack Engineering &amp; Modern Frameworks</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="text-chef-blue font-bold font-mono">◈</span>
+<span>Generative AI &amp; Production RAG Pipelines</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="text-chef-blue font-bold font-mono">◈</span>
+<span>Distributed &amp; Event-Driven Systems</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="text-chef-blue font-bold font-mono">◈</span>
+<span>Developer Tooling &amp; Infrastructure as Code</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="text-chef-blue font-bold font-mono">◈</span>
+<span>Open-Source Software &amp; Research Sharing</span>
+</li>
+</ul>
+</div>
+<!-- Sub-panel 2 -->
+<div class="p-6 bg-white border border-morocco-stone rounded shadow-xs">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-morocco-terracotta text-[20px]">verified</span>
+<h3 class="font-grotesk text-base text-chef-blue-dark font-bold uppercase tracking-wider">Core principles</h3>
+</div>
+<ul class="space-y-4 font-grotesk text-sm">
+<div>
+<div class="font-semibold text-morocco-charcoal">Clean architecture over premature cleverness</div>
+<p class="text-morocco-slate text-xs mt-1 leading-relaxed">Favor straightforward interfaces, modular boundaries, and explicit state over intricate abstractions that hinder long-term maintenance.</p>
+</div>
+<div>
+<div class="font-semibold text-morocco-charcoal">Measurable benchmarks over intuition</div>
+<p class="text-morocco-slate text-xs mt-1 leading-relaxed">Profile before refactoring. Validate throughput, latency percentiles, and vector retrieval accuracy with deterministic datasets.</p>
+</div>
+<div>
+<div class="font-semibold text-morocco-charcoal">Moroccan craftsmanship translated to digital precision</div>
+<p class="text-morocco-slate text-xs mt-1 leading-relaxed">Care deeply about the unseen joints, the documentation, the latency under stress, and the durable elegance of every service deployed.</p>
+</div>
+</ul>
+</div>
+</div>
+</section>
+<!-- 07. TECHNICAL STACK MATRIX -->
+<section class="py-14">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-3">
+<div>
+<div class="font-mono text-xs text-morocco-terracotta tracking-widest uppercase mb-1">05 / INVENTORY ─── ◈ ───</div>
+<h2 class="font-grotesk text-3xl text-chef-blue-dark tracking-tight font-bold">Technical Stack</h2>
+</div>
+<p class="font-grotesk text-sm text-morocco-slate max-w-md">
+              Clean categorized inventory of languages, frameworks, infrastructure, and engineering practices.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- Box 1: Languages -->
+<div class="bg-white border border-morocco-stone rounded shadow-xs p-5">
+<div class="font-mono text-xs text-morocco-slate uppercase tracking-wider mb-1">// Languages</div>
+<div class="font-grotesk text-base text-chef-blue-dark font-bold mb-3">Core Syntax</div>
+<div class="flex flex-wrap gap-1.5 font-mono text-xs">
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Java 21</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Python</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">TypeScript</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">JavaScript</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">C / C++</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">SQL (PostgreSQL)</span>
+</div>
+</div>
+<!-- Box 2: Backend & APIs -->
+<div class="bg-white border border-morocco-stone rounded shadow-xs p-5">
+<div class="font-mono text-xs text-morocco-slate uppercase tracking-wider mb-1">// Backend &amp; APIs</div>
+<div class="font-grotesk text-base text-chef-blue-dark font-bold mb-3">Services &amp; Gateways</div>
+<div class="flex flex-wrap gap-1.5 font-mono text-xs">
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Spring Boot 3</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Django</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">FastAPI</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">RESTful APIs</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">OpenAPI / Swagger</span>
+</div>
+</div>
+<!-- Box 3: Frontend -->
+<div class="bg-white border border-morocco-stone rounded shadow-xs p-5">
+<div class="font-mono text-xs text-morocco-slate uppercase tracking-wider mb-1">// Frontend</div>
+<div class="font-grotesk text-base text-chef-blue-dark font-bold mb-3">Client Interfaces</div>
+<div class="flex flex-wrap gap-1.5 font-mono text-xs">
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">React</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Next.js</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Angular</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Tailwind CSS</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">State Management</span>
+</div>
+</div>
+<!-- Box 4: Data & Infrastructure -->
+<div class="bg-white border border-morocco-stone rounded shadow-xs p-5">
+<div class="font-mono text-xs text-morocco-slate uppercase tracking-wider mb-1">// Data &amp; Infra</div>
+<div class="font-grotesk text-base text-chef-blue-dark font-bold mb-3">Persistence &amp; Streaming</div>
+<div class="flex flex-wrap gap-1.5 font-mono text-xs">
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">PostgreSQL</span>
+<span class="px-2 py-1 bg-chef-blue-light border border-chef-blue/30 text-chef-blue-dark font-medium rounded">pgvector</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Apache Kafka</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Debezium CDC</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Redis</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Docker / Compose</span>
+</div>
+</div>
+<!-- Box 5: AI & LLM Systems -->
+<div class="bg-white border border-morocco-stone rounded shadow-xs p-5">
+<div class="font-mono text-xs text-morocco-slate uppercase tracking-wider mb-1">// AI &amp; LLM Systems</div>
+<div class="font-grotesk text-base text-chef-blue-dark font-bold mb-3">Applied Intelligence</div>
+<div class="flex flex-wrap gap-1.5 font-mono text-xs">
+<span class="px-2 py-1 bg-chef-blue-light border border-chef-blue/30 text-chef-blue font-bold rounded">RAG Pipelines</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">LangChain &amp; LlamaIndex</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Vector Embeddings</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Qdrant</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Evaluation Frameworks</span>
+</div>
+</div>
+<!-- Box 6: Tooling & Practices -->
+<div class="bg-white border border-morocco-stone rounded shadow-xs p-5">
+<div class="font-mono text-xs text-morocco-slate uppercase tracking-wider mb-1">// Tooling &amp; Practices</div>
+<div class="font-grotesk text-base text-chef-blue-dark font-bold mb-3">Quality &amp; Delivery</div>
+<div class="flex flex-wrap gap-1.5 font-mono text-xs">
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Git &amp; GitHub Actions</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">GitLab CI/CD</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">JUnit 5 / Testcontainers</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Spec-Driven Dev</span>
+<span class="px-2 py-1 bg-morocco-paper border border-morocco-stone text-morocco-charcoal rounded">Figma Hand-off</span>
+</div>
+</div>
+</div>
+<!-- Final Milestone Banner -->
+<div class="mt-12 p-8 bg-white border border-morocco-stone rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+<div class="absolute right-0 top-0 bottom-0 w-32 pointer-events-none opacity-10 flex items-center justify-center">
+<svg fill="none" height="120" viewbox="0 0 100 100" width="120">
+<polygon points="50,5 90,25 90,75 50,95 10,75 10,25" stroke="#315F78" stroke-width="2"></polygon>
+<polygon points="50,15 80,30 80,70 50,85 20,70 20,30" stroke="#C98B62" stroke-width="1.5"></polygon>
+</svg>
+</div>
+<div class="flex flex-col gap-1 text-center md:text-left z-10">
+<span class="font-mono text-xs text-morocco-terracotta uppercase tracking-widest font-semibold">// NEXT MILESTONE ─── ◈</span>
+<h3 class="font-grotesk text-2xl text-chef-blue-dark font-bold">Ready to build resilient systems together?</h3>
+<p class="font-grotesk text-sm text-morocco-slate">Whether you are architecting data-intensive backends or modern AI agent systems, let's connect.</p>
+</div>
+<div class="flex items-center gap-4 shrink-0 z-10">
+<a class="px-6 py-3 bg-chef-blue hover:bg-chef-blue-dark text-white font-mono text-xs uppercase tracking-wider font-semibold rounded shadow transition-all duration-150 flex items-center gap-2" href="mailto:contact@abdelhamid.engineer">
+<span>Initiate Conversation</span>
+<span>→</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- FOOTER -->
+<footer class="w-full bg-white border-t border-morocco-stone mt-12">
+<div class="max-w-6xl mx-auto px-4 md:px-8 py-10">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 pb-6 border-b border-morocco-stone">
+<div class="flex flex-col gap-1">
+<span class="font-grotesk text-base font-bold text-morocco-charcoal tracking-tight">Abdelhamid Hachimi-Alaoui</span>
+<p class="font-mono text-xs text-morocco-slate">Designed and built by Abdelhamid with care.</p>
+</div>
+<div class="flex items-center gap-6">
+<a class="font-mono text-xs text-morocco-slate hover:text-chef-blue transition-colors flex items-center gap-1" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>GitHub</span>
+<span class="material-symbols-outlined text-[13px]">arrow_outward</span>
+</a>
+<a class="font-mono text-xs text-morocco-slate hover:text-chef-blue transition-colors flex items-center gap-1" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<span>LinkedIn</span>
+<span class="material-symbols-outlined text-[13px]">arrow_outward</span>
+</a>
+<a class="font-mono text-xs text-morocco-slate hover:text-chef-blue transition-colors flex items-center gap-1" href="mailto:contact@abdelhamid.engineer">
+<span>Email</span>
+<span class="material-symbols-outlined text-[13px]">arrow_outward</span>
+</a>
+<a class="font-mono text-xs text-morocco-slate hover:text-chef-blue transition-colors flex items-center gap-1" data-path="cv" href="#">
+<span>CV</span>
+<span class="material-symbols-outlined text-[13px]">arrow_outward</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-6 font-mono text-xs text-morocco-slate">
+<span>© 2026 Abdelhamid Hachimi-Alaoui. All rights reserved.</span>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-morocco-olive"></span>
+<span>MOROCCO · GMT+1 · 35.1688° N, 5.2684° W</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Interactive Filtering Script -->
+<script>
+    (function initEngineUI() {
+      // Filter Logic for Engineering Notes
+      const filterButtons = document.querySelectorAll('#article-filters .filter-btn');
+      const articleItems = document.querySelectorAll('#article-list .article-item');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-chef-blue', 'text-white', 'font-bold');
+            b.classList.add('text-morocco-slate', 'hover:text-morocco-charcoal', 'hover:bg-white');
+          });
+
+          btn.classList.add('bg-chef-blue', 'text-white', 'font-bold');
+          btn.classList.remove('text-morocco-slate', 'hover:text-morocco-charcoal', 'hover:bg-white');
+
+          articleItems.forEach(item => {
+            const category = item.getAttribute('data-category');
+            if (filter === 'all' || category === filter) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    })();
+  </script>
+</body></html>

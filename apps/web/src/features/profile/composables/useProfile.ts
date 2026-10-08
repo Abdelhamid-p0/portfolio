@@ -7,7 +7,11 @@ export type ProfileData = {
     id: string
     name: string
     headline?: string | null
+    bio?: string | null
     location?: string | null
+    email?: string | null
+    githubUrl?: string | null
+    linkedinUrl?: string | null
   } | null
 }
 

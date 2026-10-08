@@ -1,26 +1,15 @@
-<script setup lang="ts">
-import SiteFooter from '../../widgets/site-footer/SiteFooter.vue'
-import SiteHeader from '../../widgets/site-header/SiteHeader.vue'
-</script>
-
 <template>
-  <div>
-    <SiteHeader />
-    <main class="page-shell">
-      <section class="content-card">
-        <h1>About</h1>
-        <p>Profile biography and story will be implemented in the visual phase.</p>
-      </section>
-    </main>
-    <SiteFooter />
+  <div class="page-shell">
+    <section class="content-card">
+      <h1>About</h1>
+      <p>Profile biography and story will be implemented in the visual phase.</p>
+    </section>
   </div>
 </template>
 
 <style scoped>
 .page-shell {
-  width: min(1200px, calc(100% - 2rem));
-  margin: 0 auto;
-  padding: 5rem 0 3rem;
+  padding: 0;
 }
 
 .content-card {

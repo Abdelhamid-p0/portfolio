@@ -1,26 +1,15 @@
-<script setup lang="ts">
-import SiteFooter from '../../widgets/site-footer/SiteFooter.vue'
-import SiteHeader from '../../widgets/site-header/SiteHeader.vue'
-</script>
-
 <template>
-  <div>
-    <SiteHeader />
-    <main class="page-shell">
-      <section class="content-card">
-        <h1>404</h1>
-        <p>Page not found.</p>
-      </section>
-    </main>
-    <SiteFooter />
+  <div class="page-shell">
+    <section class="content-card">
+      <h1>404</h1>
+      <p>Page not found.</p>
+    </section>
   </div>
 </template>
 
 <style scoped>
 .page-shell {
-  width: min(1200px, calc(100% - 2rem));
-  margin: 0 auto;
-  padding: 5rem 0 3rem;
+  padding: 0;
 }
 
 .content-card {

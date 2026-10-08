@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"error":"#ffb4ab","surface-container-lowest":"#0d0e11","secondary":"#75daa8","on-secondary-fixed-variant":"#005235","surface-container-low":"#1b1b1f","on-surface":"#e3e2e6","secondary-fixed-dim":"#75daa8","on-tertiary-fixed-variant":"#484740","surface-dim":"#121316","tertiary":"#faf6ed","on-primary":"#00391d","tertiary-container":"#dddad1","error-container":"#93000a","on-tertiary":"#31312b","surface-tint":"#73db9a","surface-variant":"#343538","inverse-primary":"#006d3e","on-tertiary-container":"#605f58","on-secondary-container":"#d1ffe3","primary-fixed":"#8ff8b4","on-primary-container":"#006d3e","on-tertiary-fixed":"#1c1c16","on-surface-variant":"#bdcabe","on-primary-fixed-variant":"#00522d","secondary-container":"#008056","surface-container":"#1f1f23","tertiary-fixed":"#e5e2d9","inverse-on-surface":"#2f3034","tertiary-fixed-dim":"#c9c6be","on-background":"#e3e2e6","on-secondary-fixed":"#002113","on-secondary":"#003823","surface-bright":"#38393c","surface-container-highest":"#343538","on-error-container":"#ffdad6","primary":"#dbffe2","primary-fixed-dim":"#73db9a","outline":"#889489","primary-container":"#86efac","outline-variant":"#3e4a40","surface-container-high":"#292a2d","inverse-surface":"#e3e2e6","on-primary-fixed":"#00210f","on-error":"#690005","secondary-fixed":"#92f7c3","surface":"#121316","background":"#121316"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-md":"1rem","space-xs":"0.25rem","space-sm":"0.5rem","space-2xl":"3rem","space-2xs":"0.125rem","column-gap":"1.5rem","space-lg":"1.5rem","space-4xl":"6rem","space-xl":"2rem","max-content-width":"72rem","margin-page":"2rem","row-gap":"2rem","space-3xl":"4.5rem"},"fontFamily":{"label-sm":["Space Mono"],"headline-md":["Space Grotesk"],"body-lg":["Space Mono"],"label-md":["Space Mono"],"headline-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"body-sm":["Space Mono"],"headline-lg-mobile":["Space Grotesk"],"headline-xl":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"code-inline":["Space Mono"],"body-md":["Space Mono"]},"fontSize":{"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.12em","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-lg":["15px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"500"}],"headline-sm":["17px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"500"}],"body-sm":["11px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"600"}],"headline-xl-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"code-inline":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["13px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface-container-lowest text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col justify-between"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30"><div class="h-16 max-w-max-content-width mx-auto px-space-md lg:px-margin-page flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex flex-col" data-path="work" href="#"><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface uppercase">Abdelhamid</span><span class="font-label-sm text-label-sm uppercase text-outline tracking-wider">Software Engineer</span></a><nav class="hidden md:flex items-center gap-space-lg ml-space-md" data-active-classes="text-primary border-b border-primary font-medium"><a aria-current="page" class="transition-colors py-space-xs text-primary border-b border-primary font-medium" data-path="work" href="#">Work</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="experience" href="#">Experience</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="writing" href="#">Writing</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="about" href="#">About</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-2xs bg-surface-container-low border border-outline-variant/40"><span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Available</span></div><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container transition-colors px-space-md py-space-xs border border-outline-variant/60" href="mailto:contact@abdelhamid.engineer">Let's talk</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface-container-lowest flex-1"><div class="max-w-max-content-width mx-auto px-space-md lg:px-margin-page py-space-xl"><div class="flex flex-col w-full">
+<!-- 00. HERO SECTION -->
+<section class="flex flex-col pt-space-md pb-space-3xl border-b border-outline-variant/30">
+<!-- Status Pill & Availability -->
+<div class="flex flex-wrap items-center gap-space-sm mb-space-xl">
+<div class="flex items-center gap-space-xs px-space-sm py-space-2xs bg-surface-container-low border border-outline-variant/60">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed-dim">Available for new roles</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline tracking-wider hidden sm:inline-block">//</span>
+<div class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">
+        Software Engineer · Full-Stack · Generative AI
+      </div>
+</div>
+<!-- Main Headline -->
+<div class="max-w-4xl">
+<h1 class="font-headline-xl text-headline-xl text-tertiary tracking-tight font-semibold mb-space-lg leading-tight">
+        Building software.<br class="hidden sm:block"/>
+        Exploring what's next.
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mb-space-2xl leading-relaxed">
+        I build software systems and AI-powered applications, with a focus on clean architecture, practical engineering, and continuous learning. Fresh software engineering graduate blending robust distributed backend systems with practical generative AI &amp; RAG pipelines.
+      </p>
+</div>
+<!-- Actions & Social Ledger -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg pt-space-md border-t border-outline-variant/20">
+<div class="flex flex-wrap items-center gap-space-md">
+<a class="px-space-md py-space-xs bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider font-bold transition-all duration-150 hover:bg-surface-tint" href="#work">
+          View my work →
+        </a>
+<a class="px-space-md py-space-xs bg-transparent border border-outline-variant/60 text-on-surface hover:border-primary-container hover:text-primary-container transition-all duration-150 font-label-md text-label-md uppercase tracking-wider" href="#writing">
+          Read my writing ↗
+        </a>
+</div>
+<!-- Compact Metas -->
+<div class="flex items-center gap-space-md font-label-sm text-label-sm uppercase tracking-widest text-outline">
+<a class="hover:text-primary-container transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">GitHub</a>
+<span>·</span>
+<a class="hover:text-primary-container transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<span>·</span>
+<a class="hover:text-primary-container transition-colors" href="mailto:contact@abdelhamid.engineer">Email</a>
+<span>·</span>
+<a class="hover:text-primary-container text-on-surface transition-colors flex items-center gap-space-2xs" data-path="cv" href="#">
+<span>Resume / CV</span>
+<span class="material-symbols-outlined text-[13px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 01. CURRENTLY EXPLORING STATUS BAR -->
+<section class="py-space-xl border-b border-outline-variant/30">
+<div class="bg-surface-container-low border border-outline-variant/50 p-space-lg flex flex-col md:flex-row gap-space-lg md:items-center justify-between">
+<div class="flex flex-col gap-space-2xs md:max-w-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-inline text-code-inline text-primary-container">&gt; CURRENTLY_INVESTIGATING:</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Deterministic evaluation for multi-stage RAG pipelines and low-latency Kafka streaming patterns under variable network partitions.
+        </p>
+</div>
+<div class="flex flex-wrap gap-space-xs items-center max-w-2xl">
+<span class="px-space-sm py-space-2xs bg-surface-container border border-outline-variant/40 font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">Generative AI · RAG</span>
+<span class="px-space-sm py-space-2xs bg-surface-container border border-outline-variant/40 font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">Spec-Driven Dev</span>
+<span class="px-space-sm py-space-2xs bg-surface-container border border-outline-variant/40 font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">Event-Driven</span>
+<span class="px-space-sm py-space-2xs bg-surface-container border border-outline-variant/40 font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">AI-Assisted Eng</span>
+<span class="px-space-sm py-space-2xs bg-surface-container border border-outline-variant/40 font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">Distributed Systems</span>
+</div>
+</div>
+</section>
+<!-- 02. SELECTED WORK SECTION -->
+<section class="py-space-3xl border-b border-outline-variant/30 scroll-mt-20" id="work">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-sm">
+<div>
+<div class="font-label-sm text-label-sm text-primary-container tracking-widest uppercase mb-space-2xs">01 / Portfolio</div>
+<h2 class="font-headline-lg text-headline-lg text-tertiary tracking-tight font-semibold">Selected work</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+        A few projects and technical experiments I've designed, engineered, benchmarked, and deployed.
+      </p>
+</div>
+<!-- Project Matrix (2x2 Grid) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Project 1: AI Educational Platform -->
+<article class="flex flex-col bg-surface-container-low border border-outline-variant/40 hover:border-primary-container/80 transition-colors duration-200">
+<div class="px-space-lg py-space-sm border-b border-outline-variant/30 flex items-center justify-between text-on-surface-variant">
+<span class="font-code-inline text-code-inline text-outline">SYS-01 // RAG_CORE</span>
+<span class="font-code-inline text-code-inline text-primary-container">2025</span>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-space-md mb-space-sm">
+<h3 class="font-headline-md text-headline-md text-tertiary font-medium">AI Educational Platform</h3>
+<span class="px-space-sm py-space-2xs bg-surface-container text-secondary font-label-sm text-label-sm uppercase tracking-wider border border-secondary/20">Featured</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              An AI-powered platform helping educational content managers review, improve and generate curriculum units with granular context grounding.
+            </p>
+<!-- Inline Architecture Flow Diagram -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 p-space-sm mb-space-lg">
+<div class="font-code-inline text-code-inline text-outline uppercase tracking-wider mb-space-xs flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">account_tree</span>
+<span>System Pipeline Topology</span>
+</div>
+<div class="flex flex-wrap items-center gap-1 font-code-inline text-code-inline text-on-surface text-[11px]">
+<span class="px-1.5 py-0.5 bg-surface-container-high text-tertiary">React UI</span>
+<span class="text-outline">→</span>
+<span class="px-1.5 py-0.5 bg-surface-container-high text-tertiary">Spring Boot Gateway</span>
+<span class="text-outline">→</span>
+<span class="px-1.5 py-0.5 bg-surface-container-high text-secondary">AI Orchestrator</span>
+<span class="text-outline">→</span>
+<span class="px-1.5 py-0.5 bg-surface-container-high text-primary">Retriever (Hybrid)</span>
+<span class="text-outline">→</span>
+<span class="px-1.5 py-0.5 bg-surface-container-high text-primary-fixed">pgvector</span>
+<span class="text-outline">→</span>
+<span class="px-1.5 py-0.5 bg-surface-container-high text-secondary-fixed">LLM Synthesis</span>
+</div>
+</div>
+<!-- Tags -->
+<div class="flex flex-wrap gap-space-2xs mb-space-lg">
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">React</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">TypeScript</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">Spring Boot (Java 21)</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">PostgreSQL</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">pgvector</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-primary-container">RAG Pipeline</span>
+</div>
+</div>
+<div class="pt-space-md border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-space-sm font-label-sm text-label-sm uppercase tracking-wider">
+<button class="text-primary-container hover:underline flex items-center gap-space-2xs" onclick="document.getElementById('deep-dive-study').scrollIntoView({behavior: 'smooth'})">
+<span>Deep-Dive Case Study</span>
+<span class="material-symbols-outlined text-[13px]">expand_more</span>
+</button>
+<div class="flex items-center gap-space-md text-outline">
+<a class="hover:text-tertiary transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">GitHub Repo ↗</a>
+<a class="hover:text-tertiary transition-colors" href="#">Demo Spec ↗</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 2: Kafka Consumer Optimization -->
+<article class="flex flex-col bg-surface-container-low border border-outline-variant/40 hover:border-primary-container/80 transition-colors duration-200">
+<div class="px-space-lg py-space-sm border-b border-outline-variant/30 flex items-center justify-between text-on-surface-variant">
+<span class="font-code-inline text-code-inline text-outline">SYS-02 // STREAMING_CDC</span>
+<span class="font-code-inline text-code-inline text-primary-container">2025</span>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-space-md mb-space-sm">
+<h3 class="font-headline-md text-headline-md text-tertiary font-medium">Kafka Consumer Optimization</h3>
+<span class="px-space-sm py-space-2xs bg-surface-container text-secondary font-label-sm text-label-sm uppercase tracking-wider border border-secondary/20">+4.2x Throughput</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Production-grade proof-of-concept focused on improving invoice-processing reliability, mitigating consumer group head-of-line blocking, and leveraging Debezium CDC for idempotent event distribution.
+            </p>
+<div class="bg-surface-container-lowest border border-outline-variant/30 p-space-sm mb-space-lg font-code-inline text-code-inline text-on-surface-variant">
+<div class="flex justify-between items-center text-outline text-[11px] mb-space-xs">
+<span>BENCHMARK: CONSUMER LAG MITIGATION</span>
+<span class="text-secondary-fixed-dim">-38% P99 LATENCY</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 overflow-hidden">
+<div class="bg-secondary h-full w-[82%]"></div>
+</div>
+</div>
+<!-- Tags -->
+<div class="flex flex-wrap gap-space-2xs mb-space-lg">
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">Java 21</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">Apache Kafka</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">Debezium CDC</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">PostgreSQL</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">Docker</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">Prometheus</span>
+</div>
+</div>
+<div class="pt-space-md border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-space-sm font-label-sm text-label-sm uppercase tracking-wider">
+<a class="text-primary-container hover:underline flex items-center gap-space-2xs" href="#writing">
+<span>Read Architecture Post</span>
+<span class="material-symbols-outlined text-[13px]">article</span>
+</a>
+<div class="flex items-center gap-space-md text-outline">
+<a class="hover:text-tertiary transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
+<a class="hover:text-tertiary transition-colors" href="#">Benchmark Report ↗</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 3: ENSAK EVENT Platform -->
+<article class="flex flex-col bg-surface-container-low border border-outline-variant/40 hover:border-primary-container/80 transition-colors duration-200">
+<div class="px-space-lg py-space-sm border-b border-outline-variant/30 flex items-center justify-between text-on-surface-variant">
+<span class="font-code-inline text-code-inline text-outline">SYS-03 // DISTRIBUTED_CONCURRENCY</span>
+<span class="font-code-inline text-code-inline text-primary-container">2024</span>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-space-md mb-space-sm">
+<h3 class="font-headline-md text-headline-md text-tertiary font-medium">ENSAK EVENT — Campus Platform</h3>
+<span class="px-space-sm py-space-2xs bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider border border-outline-variant/40">3k+ Users</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Comprehensive campus event lifecycle management platform with real-time dynamic QR ticket validation, JWT access delegation, and Redis cached seat leases.
+            </p>
+<div class="flex flex-wrap gap-space-2xs mb-space-lg">
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">Spring Boot</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">Angular</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">PostgreSQL</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">Redis</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">JWT</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">Tailwind CSS</span>
+</div>
+</div>
+<div class="pt-space-md border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-space-sm font-label-sm text-label-sm uppercase tracking-wider">
+<span class="text-outline font-code-inline text-code-inline">PROD_VERIFIED // 3,000+ AUDIT</span>
+<div class="flex items-center gap-space-md text-outline">
+<a class="hover:text-tertiary transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
+<a class="hover:text-tertiary transition-colors" href="#">Architecture Overview ↗</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Project 4: JobInsight -->
+<article class="flex flex-col bg-surface-container-low border border-outline-variant/40 hover:border-primary-container/80 transition-colors duration-200">
+<div class="px-space-lg py-space-sm border-b border-outline-variant/30 flex items-center justify-between text-on-surface-variant">
+<span class="font-code-inline text-code-inline text-outline">SYS-04 // VECTOR_SEMANTICS</span>
+<span class="font-code-inline text-code-inline text-primary-container">2024</span>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between gap-space-md mb-space-sm">
+<h3 class="font-headline-md text-headline-md text-tertiary font-medium">JobInsight — AI Career Engine</h3>
+<span class="px-space-sm py-space-2xs bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider border border-outline-variant/40">Embedding Search</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Semantic search engine and automated resume alignment system leveraging OpenAI embeddings and Qdrant to match engineering candidates against multi-dimensional JD criteria.
+            </p>
+<div class="flex flex-wrap gap-space-2xs mb-space-lg">
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">Python</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">FastAPI</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">React</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">OpenAI Embeddings</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">Qdrant</span>
+<span class="px-space-xs py-space-2xs bg-surface-container border border-outline-variant/30 font-code-inline text-code-inline text-on-surface-variant">Docker</span>
+</div>
+</div>
+<div class="pt-space-md border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-space-sm font-label-sm text-label-sm uppercase tracking-wider">
+<span class="text-outline font-code-inline text-code-inline">COSINE_SIMILARITY // HNSW</span>
+<div class="flex items-center gap-space-md text-outline">
+<a class="hover:text-tertiary transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
+<a class="hover:text-tertiary transition-colors" href="#">Demo Walkthrough ↗</a>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- 03. PROJECT CASE STUDY SPOTLIGHT: 9-PART STRUCTURED BREAKDOWN -->
+<section class="py-space-3xl border-b border-outline-variant/30 scroll-mt-20" id="deep-dive-study">
+<div class="border border-outline-variant/60 bg-surface-container-low p-space-lg lg:p-space-xl">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-lg border-b border-outline-variant/40">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">[PLATE-09 ARCHIVAL SPEC]</span>
+<h2 class="font-headline-lg text-headline-lg text-tertiary tracking-tight font-semibold mt-space-2xs">
+            Case Study: AI Educational Platform (Deep-Dive)
+          </h2>
+</div>
+<div class="flex items-center gap-space-xs font-code-inline text-code-inline text-outline">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>SYSTEM SPECIFICATION · REV 2.4</span>
+</div>
+</div>
+<!-- 9-Part Systematic Manifest -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg pt-space-xl text-on-surface">
+<!-- 01 Context -->
+<div class="flex flex-col border-l border-outline-variant/40 pl-space-md">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest mb-space-2xs">01 — Context</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Higher-ed curriculum coordinators manage dense syllabi across hundreds of dynamic modular disciplines. Manual quality reviews created bottlenecks of up to 4 weeks per semester update cycle.
+          </p>
+</div>
+<!-- 02 Problem -->
+<div class="flex flex-col border-l border-outline-variant/40 pl-space-md">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest mb-space-2xs">02 — Problem</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Off-the-shelf generative models suffer from catastrophic hallucination when referencing institutional course prerequisites, historical lecture notes, and regional accreditation mandates.
+          </p>
+</div>
+<!-- 03 Approach -->
+<div class="flex flex-col border-l border-outline-variant/40 pl-space-md">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest mb-space-2xs">03 — Approach</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Engineered an isolated RAG architecture running inside the existing relational boundary using PostgreSQL and pgvector, coupling semantic embeddings with BM25 keyword matching for high-precision recall.
+          </p>
+</div>
+<!-- 04 Architecture -->
+<div class="flex flex-col border-l border-outline-variant/40 pl-space-md">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest mb-space-2xs">04 — Architecture</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Asynchronous ingestion pipeline splitting PDF/Markdown resources into recursive semantic chunks with sliding overlaps (512 tokens with 64-token overlap), stored with relational foreign keys.
+          </p>
+</div>
+<!-- 05 Technical Decisions -->
+<div class="flex flex-col border-l border-outline-variant/40 pl-space-md">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest mb-space-2xs">05 — Technical Decisions</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Selected pgvector over standalone vector DBs (Pinecone/Milvus) to preserve transactional ACID guarantees and avoid synchronization drifts between user permissions and chunk records.
+          </p>
+</div>
+<!-- 06 Challenges -->
+<div class="flex flex-col border-l border-outline-variant/40 pl-space-md">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest mb-space-2xs">06 — Challenges</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Balancing context window saturation with LLM inference latency. Solved by implementing dynamic re-ranking via reciprocal rank fusion (RRF), discarding candidate passages below 0.78 similarity.
+          </p>
+</div>
+<!-- 07 What I Learned -->
+<div class="flex flex-col border-l border-outline-variant/40 pl-space-md">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest mb-space-2xs">07 — What I Learned</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Chunking heuristics outweigh model parameter size. A 7B parameter model fed meticulously chunked and ranked context consistently outperformed raw 70B zero-shot completions.
+          </p>
+</div>
+<!-- 08 Results -->
+<div class="flex flex-col border-l border-outline-variant/40 pl-space-md bg-surface-container/60 p-space-sm">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-space-2xs">08 — Results</span>
+<div class="font-headline-md text-headline-md text-tertiary font-bold mb-space-2xs">-85%</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+            Reduction in content review cycles. Factual verification score reached 96.4% in blinded trials against human domain experts.
+          </p>
+</div>
+<!-- 09 Links & Code -->
+<div class="flex flex-col border-l border-outline-variant/40 pl-space-md">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest mb-space-2xs">09 — Verification</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+            Architecture review, Docker Compose topology, and synthetic evaluation harness:
+          </p>
+<div class="flex flex-col gap-space-xs font-label-sm text-label-sm uppercase">
+<a class="text-on-surface hover:text-primary-container transition-colors flex items-center gap-space-2xs" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>&gt; Repository Source</span>
+<span class="material-symbols-outlined text-[13px]">code</span>
+</a>
+<a class="text-on-surface hover:text-primary-container transition-colors flex items-center gap-space-2xs" href="#">
+<span>&gt; Evaluation Harness Spec</span>
+<span class="material-symbols-outlined text-[13px]">description</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 04. EXPERIENCE SECTION -->
+<section class="py-space-3xl border-b border-outline-variant/30 scroll-mt-20" id="experience">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-sm">
+<div>
+<div class="font-label-sm text-label-sm text-primary-container tracking-widest uppercase mb-space-2xs">02 / Background</div>
+<h2 class="font-headline-lg text-headline-lg text-tertiary tracking-tight font-semibold">Experience</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+        Professional internships, software engineering responsibilities, and distributed backend achievements.
+      </p>
+</div>
+<!-- Timeline items -->
+<div class="flex flex-col divide-y divide-outline-variant/30 border-y border-outline-variant/30">
+<!-- Entry 1: Cegedim -->
+<div class="py-space-xl flex flex-col lg:flex-row gap-space-lg">
+<div class="w-full lg:w-48 shrink-0">
+<div class="font-code-inline text-code-inline text-primary-container">2025 (4 MOS)</div>
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mt-space-2xs">Internship</div>
+</div>
+<div class="flex-1">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-space-xs mb-space-sm">
+<h3 class="font-headline-md text-headline-md text-tertiary font-semibold">
+              Software Engineering Intern <span class="text-outline font-normal">@</span> Cegedim
+            </h3>
+<span class="font-code-inline text-code-inline text-on-surface-variant">Rabat / Casablanca</span>
+</div>
+<p class="font-body-md text-body-md text-tertiary-container mb-space-md">
+            Production-focused initiative targeting high-throughput invoice and medical claim stream processing using Apache Kafka and Change Data Capture pipelines.
+          </p>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-space-xs">
+<span class="text-primary-container font-code-inline">•</span>
+<span>Analyzed consumer lag bottlenecks across Kafka topic partitions; tuned batch fetching parameters (`fetch.min.bytes` and `max.poll.records`), improving overall consumer throughput by 4.2x.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="text-primary-container font-code-inline">•</span>
+<span>Architected and integrated Debezium CDC connectors with PostgreSQL to build zero-data-loss audit trails and real-time reconciliation logs.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="text-primary-container font-code-inline">•</span>
+<span>Lowered end-to-end message processing P99 latency by 38% while eliminating transient out-of-order execution states.</span>
+</li>
+</ul>
+<div class="flex flex-wrap gap-space-2xs mt-space-md">
+<span class="px-space-xs py-space-2xs bg-surface-container-high font-code-inline text-code-inline text-tertiary-container">Java 21</span>
+<span class="px-space-xs py-space-2xs bg-surface-container-high font-code-inline text-code-inline text-tertiary-container">Apache Kafka</span>
+<span class="px-space-xs py-space-2xs bg-surface-container-high font-code-inline text-code-inline text-tertiary-container">Debezium CDC</span>
+<span class="px-space-xs py-space-2xs bg-surface-container-high font-code-inline text-code-inline text-tertiary-container">Docker</span>
+<span class="px-space-xs py-space-2xs bg-surface-container-high font-code-inline text-code-inline text-tertiary-container">Prometheus</span>
+</div>
+</div>
+</div>
+<!-- Entry 2: TNA Consulting -->
+<div class="py-space-xl flex flex-col lg:flex-row gap-space-lg">
+<div class="w-full lg:w-48 shrink-0">
+<div class="font-code-inline text-code-inline text-outline">2024 (3 MOS)</div>
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mt-space-2xs">Internship</div>
+</div>
+<div class="flex-1">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-space-xs mb-space-sm">
+<h3 class="font-headline-md text-headline-md text-tertiary font-semibold">
+              Full-Stack Developer Intern <span class="text-outline font-normal">@</span> TNA Consulting
+            </h3>
+<span class="font-code-inline text-code-inline text-on-surface-variant">Casablanca</span>
+</div>
+<p class="font-body-md text-body-md text-tertiary-container mb-space-md">
+            Angular enterprise client platform development, modular reusable component engineering, and frontend legacy refactoring.
+          </p>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-space-xs">
+<span class="text-primary-container font-code-inline">•</span>
+<span>Engineered reusable design tokens and responsive UI components in Angular, adhering to strict design system guidelines and WCAG standards.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="text-primary-container font-code-inline">•</span>
+<span>Refactored critical client dashboard routes and lazy-loaded heavy dependencies, cutting initial JS bundle weight by 24%.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="text-primary-container font-code-inline">•</span>
+<span>Wrote automated unit testing suites in Jasmine/Karma, elevating frontend module test coverage above 82%.</span>
+</li>
+</ul>
+<div class="flex flex-wrap gap-space-2xs mt-space-md">
+<span class="px-space-xs py-space-2xs bg-surface-container-high font-code-inline text-code-inline text-tertiary-container">Angular</span>
+<span class="px-space-xs py-space-2xs bg-surface-container-high font-code-inline text-code-inline text-tertiary-container">TypeScript</span>
+<span class="px-space-xs py-space-2xs bg-surface-container-high font-code-inline text-code-inline text-tertiary-container">Tailwind CSS</span>
+<span class="px-space-xs py-space-2xs bg-surface-container-high font-code-inline text-code-inline text-tertiary-container">REST APIs</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Future Outlook Bar -->
+<div class="mt-space-lg p-space-md bg-surface-container-low border border-outline-variant/40 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">explore</span>
+<span class="font-body-md text-body-md text-tertiary">
+          Open to Full-Stack and AI Engineering roles worldwide (Remote / Hybrid / On-site).
+        </span>
+</div>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container hover:underline hidden sm:inline-block" href="mailto:contact@abdelhamid.engineer">
+        Inquire Availability →
+      </a>
+</div>
+</section>
+<!-- 05. WRITING / TECHNICAL JOURNAL SECTION -->
+<section class="py-space-3xl border-b border-outline-variant/30 scroll-mt-20" id="writing">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-sm">
+<div>
+<div class="font-label-sm text-label-sm text-primary-container tracking-widest uppercase mb-space-2xs">03 / Thoughts</div>
+<h2 class="font-headline-lg text-headline-lg text-tertiary tracking-tight font-semibold">Writing</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+        Things I build, break, learn and rethink. Engineering notes over generic tutorials.
+      </p>
+</div>
+<!-- Filter Bar Tabs -->
+<div class="flex flex-wrap gap-space-xs mb-space-xl border-b border-outline-variant/30 pb-space-sm" id="article-filters">
+<button class="filter-btn px-space-sm py-space-2xs font-label-sm text-label-sm uppercase tracking-wider bg-surface-container-high text-primary-container font-bold" data-filter="all">
+        All (5)
+      </button>
+<button class="filter-btn px-space-sm py-space-2xs font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-filter="genai">
+        Generative AI (2)
+      </button>
+<button class="filter-btn px-space-sm py-space-2xs font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-filter="backend">
+        Backend &amp; Architecture (2)
+      </button>
+<button class="filter-btn px-space-sm py-space-2xs font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-filter="experiments">
+        Experiments (1)
+      </button>
+</div>
+<!-- Article Ledger Entries -->
+<div class="flex flex-col divide-y divide-outline-variant/30 border-y border-outline-variant/30" id="article-list">
+<!-- Article 1 -->
+<article class="article-item py-space-lg group hover:bg-surface-container-low/60 transition-colors p-space-sm -mx-space-sm cursor-pointer" data-category="genai">
+<div class="flex flex-col md:flex-row md:items-baseline justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-inline text-code-inline text-outline">JAN 2025</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest px-space-xs py-0.5 bg-surface-container border border-secondary/20">Generative AI</span>
+</div>
+<span class="font-code-inline text-code-inline text-outline">7 MIN READ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary group-hover:text-primary-container transition-colors mb-space-xs">
+          Building a RAG system with Spring Boot, PostgreSQL and pgvector
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Why we chose pgvector inside our existing relational database instead of spinning up an external vector cluster, and how hybrid keyword-plus-dense retrieval preserved domain accuracy.
+        </p>
+</article>
+<!-- Article 2 -->
+<article class="article-item py-space-lg group hover:bg-surface-container-low/60 transition-colors p-space-sm -mx-space-sm cursor-pointer" data-category="backend">
+<div class="flex flex-col md:flex-row md:items-baseline justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-inline text-code-inline text-outline">NOV 2024</span>
+<span class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-widest px-space-xs py-0.5 bg-surface-container border border-outline-variant/40">Backend</span>
+</div>
+<span class="font-code-inline text-code-inline text-outline">9 MIN READ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary group-hover:text-primary-container transition-colors mb-space-xs">
+          Optimizing a Kafka Consumer: what actually made the difference?
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Profiling thread pool contention, consumer group rebalancing frequency, and tuning fetch.min.bytes under realistic batch payloads.
+        </p>
+</article>
+<!-- Article 3 -->
+<article class="article-item py-space-lg group hover:bg-surface-container-low/60 transition-colors p-space-sm -mx-space-sm cursor-pointer" data-category="backend">
+<div class="flex flex-col md:flex-row md:items-baseline justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-inline text-code-inline text-outline">SEP 2024</span>
+<span class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-widest px-space-xs py-0.5 bg-surface-container border border-outline-variant/40">Architecture</span>
+</div>
+<span class="font-code-inline text-code-inline text-outline">6 MIN READ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary group-hover:text-primary-container transition-colors mb-space-xs">
+          From CRUD to AI: structuring an AI-powered Spring Boot application
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Patterns for decoupling prompt templates, vector embeddings, and fallback model providers in modular enterprise services.
+        </p>
+</article>
+<!-- Article 4 -->
+<article class="article-item py-space-lg group hover:bg-surface-container-low/60 transition-colors p-space-sm -mx-space-sm cursor-pointer" data-category="experiments">
+<div class="flex flex-col md:flex-row md:items-baseline justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-inline text-code-inline text-outline">JUL 2024</span>
+<span class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-widest px-space-xs py-0.5 bg-surface-container border border-outline-variant/40">Experiments</span>
+</div>
+<span class="font-code-inline text-code-inline text-outline">5 MIN READ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary group-hover:text-primary-container transition-colors mb-space-xs">
+          What I learned from using Spec-Driven Development
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Using OpenAPI contracts as the single source of truth between frontend and backend to eliminate integration drift and mock drift.
+        </p>
+</article>
+<!-- Article 5 -->
+<article class="article-item py-space-lg group hover:bg-surface-container-low/60 transition-colors p-space-sm -mx-space-sm cursor-pointer" data-category="genai">
+<div class="flex flex-col md:flex-row md:items-baseline justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-inline text-code-inline text-outline">MAY 2024</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest px-space-xs py-0.5 bg-surface-container border border-secondary/20">Generative AI</span>
+</div>
+<span class="font-code-inline text-code-inline text-outline">8 MIN READ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary group-hover:text-primary-container transition-colors mb-space-xs">
+          Lessons from building an educational GenAI platform
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Handling non-deterministic LLM outputs in production, implementing guardrails, and building reliable deterministic evaluation loops.
+        </p>
+</article>
+</div>
+</section>
+<!-- 06. ABOUT SECTION -->
+<section class="py-space-3xl border-b border-outline-variant/30 scroll-mt-20" id="about">
+<div class="font-label-sm text-label-sm text-primary-container tracking-widest uppercase mb-space-2xs">04 / Perspective</div>
+<h2 class="font-headline-lg text-headline-lg text-tertiary tracking-tight font-semibold mb-space-xl">About</h2>
+<div class="max-w-4xl space-y-space-md mb-space-2xl">
+<p class="font-body-lg text-body-lg text-tertiary leading-relaxed">
+        I'm a software engineer who enjoys understanding how things work, building systems from the ground up, and turning technical problems into simple solutions.
+      </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        My interests sit at the intersection of software engineering and Generative AI — from backend architecture and event-driven systems to RAG pipelines and AI-powered applications. I learn best by building, experimenting, and documenting what I discover.
+      </p>
+</div>
+<!-- Two-column Sub-Layout: Interests & Core Principles -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Sub-panel 1 -->
+<div class="p-space-lg bg-surface-container-low border border-outline-variant/40">
+<div class="flex items-center gap-space-xs mb-space-md">
+<span class="material-symbols-outlined text-secondary text-[18px]">hub</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary font-medium uppercase tracking-wider">Currently interested in</h3>
+</div>
+<ul class="space-y-space-xs font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center gap-space-xs">
+<span class="text-secondary font-code-inline">•</span>
+<span>Software Architecture &amp; Clean Code</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="text-secondary font-code-inline">•</span>
+<span>Full-Stack Engineering &amp; Modern Frameworks</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="text-secondary font-code-inline">•</span>
+<span>Generative AI &amp; Production RAG Pipelines</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="text-secondary font-code-inline">•</span>
+<span>Distributed &amp; Event-Driven Systems</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="text-secondary font-code-inline">•</span>
+<span>Developer Tooling &amp; Infrastructure as Code</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="text-secondary font-code-inline">•</span>
+<span>Open-Source Software &amp; Research Sharing</span>
+</li>
+</ul>
+</div>
+<!-- Sub-panel 2 -->
+<div class="p-space-lg bg-surface-container-low border border-outline-variant/40">
+<div class="flex items-center gap-space-xs mb-space-md">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary font-medium uppercase tracking-wider">Core principles</h3>
+</div>
+<ul class="space-y-space-md font-body-md text-body-md text-on-surface-variant">
+<div>
+<div class="font-body-md text-body-md text-tertiary font-medium">Clean architecture over premature cleverness</div>
+<p class="font-body-sm text-body-sm text-outline mt-space-2xs">Favor straightforward interfaces, modular boundaries, and explicit state over intricate abstractions that hinder maintenance.</p>
+</div>
+<div>
+<div class="font-body-md text-body-md text-tertiary font-medium">Measurable benchmarks over intuition</div>
+<p class="font-body-sm text-body-sm text-outline mt-space-2xs">Profile before refactoring. Validate throughput, latency percentiles, and vector retrieval accuracy with deterministic datasets.</p>
+</div>
+<div>
+<div class="font-body-md text-body-md text-tertiary font-medium">Transparent technical writing</div>
+<p class="font-body-sm text-body-sm text-outline mt-space-2xs">Document architectural trade-offs, dead ends, and post-mortems honestly. Clear engineering documentation creates durable knowledge.</p>
+</div>
+</ul>
+</div>
+</div>
+</section>
+<!-- 07. TECHNICAL STACK MATRIX -->
+<section class="py-space-3xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-sm">
+<div>
+<div class="font-label-sm text-label-sm text-primary-container tracking-widest uppercase mb-space-2xs">05 / Inventory</div>
+<h2 class="font-headline-lg text-headline-lg text-tertiary tracking-tight font-semibold">Technical Stack</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+        Clean categorized inventory of languages, frameworks, infrastructure, and engineering practices.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Box 1: Languages -->
+<div class="bg-surface-container-low border border-outline-variant/40 p-space-md">
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-space-xs">// Languages</div>
+<div class="font-headline-sm text-headline-sm text-tertiary font-medium mb-space-sm">Core Syntax</div>
+<div class="flex flex-wrap gap-space-xs">
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">Java 21</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">Python</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">TypeScript</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">JavaScript</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">C / C++</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">SQL (PostgreSQL)</span>
+</div>
+</div>
+<!-- Box 2: Backend & APIs -->
+<div class="bg-surface-container-low border border-outline-variant/40 p-space-md">
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-space-xs">// Backend &amp; APIs</div>
+<div class="font-headline-sm text-headline-sm text-tertiary font-medium mb-space-sm">Services &amp; Gateways</div>
+<div class="flex flex-wrap gap-space-xs">
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">Spring Boot 3</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">Django</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">FastAPI</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">RESTful APIs</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">OpenAPI / Swagger</span>
+</div>
+</div>
+<!-- Box 3: Frontend -->
+<div class="bg-surface-container-low border border-outline-variant/40 p-space-md">
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-space-xs">// Frontend</div>
+<div class="font-headline-sm text-headline-sm text-tertiary font-medium mb-space-sm">Client Interfaces</div>
+<div class="flex flex-wrap gap-space-xs">
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">React</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">Next.js</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">Angular</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">Tailwind CSS</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">State Management</span>
+</div>
+</div>
+<!-- Box 4: Data & Infrastructure -->
+<div class="bg-surface-container-low border border-outline-variant/40 p-space-md">
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-space-xs">// Data &amp; Infra</div>
+<div class="font-headline-sm text-headline-sm text-tertiary font-medium mb-space-sm">Persistence &amp; Streaming</div>
+<div class="flex flex-wrap gap-space-xs">
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">PostgreSQL</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-secondary">pgvector</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">Apache Kafka</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">Debezium CDC</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">Redis</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">Docker / Compose</span>
+</div>
+</div>
+<!-- Box 5: AI & LLM Systems -->
+<div class="bg-surface-container-low border border-outline-variant/40 p-space-md">
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-space-xs">// AI &amp; LLM Systems</div>
+<div class="font-headline-sm text-headline-sm text-tertiary font-medium mb-space-sm">Applied Intelligence</div>
+<div class="flex flex-wrap gap-space-xs">
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-primary-container">RAG Pipelines</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">LangChain &amp; LlamaIndex concepts</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">Vector Embeddings</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">Qdrant</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">Evaluation Frameworks</span>
+</div>
+</div>
+<!-- Box 6: Tooling & Practices -->
+<div class="bg-surface-container-low border border-outline-variant/40 p-space-md">
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-space-xs">// Tooling &amp; Practices</div>
+<div class="font-headline-sm text-headline-sm text-tertiary font-medium mb-space-sm">Quality &amp; Delivery</div>
+<div class="flex flex-wrap gap-space-xs">
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">Git &amp; GitHub Actions</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">GitLab CI/CD</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">JUnit 5 / Testcontainers</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">Spec-Driven Dev</span>
+<span class="px-space-xs py-space-2xs bg-surface-container font-code-inline text-code-inline text-on-surface">Figma Hand-off</span>
+</div>
+</div>
+</div>
+<!-- Final CTA Footer Banner -->
+<div class="mt-space-2xl p-space-xl bg-surface-container border border-outline-variant/50 flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-2xs text-center md:text-left">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">// NEXT MILESTONE</span>
+<h3 class="font-headline-md text-headline-md text-tertiary font-semibold">Ready to build resilient systems together?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Whether you are building data-intensive backends or modern AI agent architectures, let's connect.</p>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<a class="px-space-lg py-space-xs bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider font-bold hover:bg-surface-tint transition-colors" href="mailto:contact@abdelhamid.engineer">
+          Initiate Conversation →
+        </a>
+</div>
+</div>
+</section>
+<!-- Interactive Filtering & Smooth Scroll Behavior -->
+<script>
+    (function initEngineUI() {
+      // Writing Category Filter
+      const filterButtons = document.querySelectorAll('#article-filters .filter-btn');
+      const articleItems = document.querySelectorAll('#article-list .article-item');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          // Reset styles
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-surface-container-high', 'text-primary-container', 'font-bold');
+            b.classList.add('text-on-surface-variant');
+          });
+
+          // Active style
+          btn.classList.add('bg-surface-container-high', 'text-primary-container', 'font-bold');
+          btn.classList.remove('text-on-surface-variant');
+
+          // Filter articles
+          articleItems.forEach(item => {
+            const category = item.getAttribute('data-category');
+            if (filter === 'all' || category === filter) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Interactive Header nav clicks matching shell data-paths
+      document.querySelectorAll('nav a[data-path], footer a[data-path]').forEach(link => {
+        const path = link.getAttribute('data-path');
+        const target = document.getElementById(path);
+        if (target) {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+          });
+        }
+      });
+    })();
+  </script>
+</div></div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 mt-space-3xl"><div class="max-w-max-content-width mx-auto px-space-md lg:px-margin-page py-space-xl"><div class="flex flex-col md:flex-row md:items-center md:justify-between gap-space-lg pb-space-lg border-b border-outline-variant/20"><div class="flex flex-col gap-space-2xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Abdelhamid Hachimi-Alaoui</span><p class="font-body-sm text-body-sm text-on-surface-variant">Designed and built by Abdelhamid.</p></div><div class="flex items-center gap-space-lg"><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-space-2xs" href="https://github.com" rel="noopener noreferrer" target="_blank"><span>GitHub</span><span class="material-symbols-outlined text-[14px]">arrow_outward</span></a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-space-2xs" href="https://linkedin.com" rel="noopener noreferrer" target="_blank"><span>LinkedIn</span><span class="material-symbols-outlined text-[14px]">arrow_outward</span></a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-space-2xs" href="mailto:contact@abdelhamid.engineer"><span>Email</span><span class="material-symbols-outlined text-[14px]">arrow_outward</span></a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-space-2xs" data-path="cv" href="#"><span>CV</span><span class="material-symbols-outlined text-[14px]">arrow_outward</span></a></div></div><div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-sm pt-space-md"><span class="font-label-sm text-label-sm text-outline tracking-wider">© 2026 Abdelhamid Hachimi-Alaoui. All rights reserved.</span><div class="flex items-center gap-space-xs"><span class="w-1 h-1 rounded-full bg-outline"></span><span class="font-code-inline text-code-inline text-outline">TERMINAL_STABLE // 127.0.0.1</span></div></div></div></footer></body></html>
