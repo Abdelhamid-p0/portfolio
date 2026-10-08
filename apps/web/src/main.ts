@@ -1,9 +1,11 @@
 import { DefaultApolloClient } from '@vue/apollo-composable'
 import { createApp } from 'vue'
 
-import { apolloClient } from './api/graphql/apollo'
 import App from './App.vue'
-import router from './router'
+import { apolloClient } from './app/providers/apollo'
+import router from './app/router'
+
+import './shared/styles/global.css'
 
 const app = createApp(App)
 
