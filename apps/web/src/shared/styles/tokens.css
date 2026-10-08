@@ -87,6 +87,12 @@
   --project-meta-padding-y: 0.5rem;
   --project-card-padding: 1.5rem;
   --font-weight-section-title: 600;
+  --font-size-post-date: 0.75rem;
+  --font-size-post-domain: 0.625rem;
+  --font-size-post-title: 1.0625rem;
+  --color-post-domain-bg: #1f1f23;
+  --color-post-domain-text: #bdcabe;
+  --color-post-hover: rgba(27, 27, 31, 0.6);
   --hero-padding-top: 1rem;
   --hero-padding-bottom: 4.5rem;
   --hero-action-padding-x: 1rem;
@@ -139,6 +145,12 @@
   --radius-project-card: 0.25rem;
   --project-meta-padding-y: 0.75rem;
   --font-weight-section-title: 700;
+  --font-size-post-date: 0.75rem;
+  --font-size-post-domain: 0.6875rem;
+  --font-size-post-title: 1.125rem;
+  --color-post-domain-bg: #eaf2f6;
+  --color-post-domain-text: #315f78;
+  --color-post-hover: rgba(255, 255, 255, 0.8);
   --hero-description-width: 42rem;
   --hero-padding-top: 1.5rem;
   --hero-padding-bottom: 4rem;

@@ -1,85 +1,130 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
+import PostList from '../../features/writing/components/PostList.vue'
 import { usePosts } from '../../features/writing/composables/usePosts'
 
 const { result, loading, error } = usePosts()
 const posts = computed(() => result.value?.posts ?? [])
+const previewPosts = computed(() => posts.value.slice(0, 3))
 </script>
 
 <template>
-  <section class="panel">
+  <section id="writing" class="writing-preview" aria-labelledby="writing-preview-title">
     <header class="section-header">
-      <p class="eyebrow">03 / Writing</p>
-      <h2>Writing</h2>
+      <div>
+        <p class="eyebrow">
+          <span class="eyebrow-dark">03 / Thoughts</span>
+          <span class="eyebrow-light">03 / Writing &amp; notes ─── ◈ ───</span>
+        </p>
+        <h2 id="writing-preview-title">
+          <span class="title-dark">Writing</span>
+          <span class="title-light">Engineering Notes</span>
+        </h2>
+      </div>
+      <p class="section-description">
+        <span class="description-dark">Things I build, break, learn and rethink. Engineering notes over generic tutorials.</span>
+        <span class="description-light">Things I build, break, learn and rethink. Thoughtful engineering notes over generic tutorials.</span>
+      </p>
     </header>
 
-    <div v-if="loading" class="state">Loading posts…</div>
-    <div v-else-if="error" class="state error">Error: {{ error.message }}</div>
-    <ul v-else class="post-list">
-      <li v-for="post in posts.slice(0, 3)" :key="post.slug">
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.excerpt || 'Post summary will be added in the next phase.' }}</p>
-      </li>
-    </ul>
+    <div v-if="loading" class="state" role="status" aria-live="polite">
+      <span class="state-mark" aria-hidden="true"></span>
+      Loading writing…
+    </div>
+    <p v-else-if="error" class="state" role="alert">
+      Writing is temporarily unavailable.
+    </p>
+    <p v-else-if="!posts.length" class="state">
+      No published writing is available yet.
+    </p>
+    <PostList v-else :posts="previewPosts" />
   </section>
 </template>
 
 <style scoped>
-.panel {
-  padding: 3rem 0;
+.writing-preview {
+  padding-block: var(--layout-work-section-space);
   border-bottom: 1px solid var(--color-border);
+  scroll-margin-top: calc(var(--header-height) + var(--space-md));
 }
 
 .section-header {
-  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--layout-work-header-space);
 }
 
 .eyebrow {
-  margin: 0 0 0.5rem;
-  color: var(--color-accent);
+  margin: 0 0 var(--space-2xs);
+  color: var(--color-section-eyebrow);
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
+  font-size: var(--font-size-label-lg);
+  letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
+}
+
+.eyebrow-light,
+.title-light,
+.description-light {
+  display: none;
+}
+
+:global(:root[data-theme='light'] .eyebrow-dark),
+:global(:root[data-theme='light'] .title-dark),
+:global(:root[data-theme='light'] .description-dark) {
+  display: none;
+}
+
+:global(:root[data-theme='light'] .eyebrow-light),
+:global(:root[data-theme='light'] .title-light),
+:global(:root[data-theme='light'] .description-light) {
+  display: inline;
 }
 
 h2 {
   margin: 0;
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  letter-spacing: -0.05em;
+  color: var(--color-heading);
+  font-size: var(--font-size-section-title);
+  font-weight: var(--font-weight-section-title);
+  line-height: var(--line-height-tight);
 }
 
-.post-list {
-  list-style: none;
+.section-description {
+  max-width: 28rem;
   margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 1rem;
-}
-
-.post-list li {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 1rem;
-}
-
-h3 {
-  margin: 0 0 0.5rem;
-}
-
-p {
-  margin: 0;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
+  font-family: var(--font-section-description);
+  font-size: var(--font-size-section-description);
+  line-height: var(--line-height-body);
 }
 
 .state {
-  color: var(--color-text-muted);
+  display: flex;
+  min-height: 3rem;
+  align-items: center;
+  gap: var(--space-sm);
+  margin: 0;
+  color: var(--color-text-secondary);
   font-family: var(--font-mono);
+  font-size: var(--font-size-label-lg);
+  line-height: var(--line-height-body);
 }
 
-.state.error {
-  color: #ffb4ab;
+.state-mark {
+  width: 0.5rem;
+  height: 0.5rem;
+  flex: 0 0 auto;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+}
+
+@media (min-width: 48rem) {
+  .section-header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
 }
 </style>
