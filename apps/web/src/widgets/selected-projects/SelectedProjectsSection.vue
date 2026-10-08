@@ -2,9 +2,9 @@
 import { computed } from 'vue'
 
 import ProjectList from '../../features/projects/components/ProjectList.vue'
-import { useProjects } from '../../features/projects/composables/useProjects'
+import { useFeaturedProjects } from '../../features/projects/composables/useProjects'
 
-const { result, loading, error } = useProjects()
+const { result, loading, error } = useFeaturedProjects()
 const projects = computed(() => result.value?.featuredProjects ?? [])
 </script>
 
@@ -32,7 +32,7 @@ const projects = computed(() => result.value?.featuredProjects ?? [])
       Featured projects are temporarily unavailable.
     </p>
     <p v-else-if="!projects.length" class="state">No featured projects are available yet.</p>
-    <ProjectList v-else :projects="projects" />
+    <ProjectList v-else :projects="projects" list-label="Featured projects" />
   </section>
 </template>
 

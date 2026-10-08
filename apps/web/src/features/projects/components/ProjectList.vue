@@ -2,13 +2,19 @@
 import type { ProjectSummary } from '../composables/useProjects'
 import ProjectCard from './ProjectCard.vue'
 
-defineProps<{
-  projects: ProjectSummary[]
-}>()
+withDefaults(
+  defineProps<{
+    projects: ProjectSummary[]
+    listLabel?: string
+  }>(),
+  {
+    listLabel: 'Projects',
+  },
+)
 </script>
 
 <template>
-  <ul class="project-list" aria-label="Featured projects">
+  <ul class="project-list" :aria-label="listLabel">
     <li v-for="(project, index) in projects" :key="project.slug">
       <ProjectCard :project="project" :position="index + 1" />
     </li>

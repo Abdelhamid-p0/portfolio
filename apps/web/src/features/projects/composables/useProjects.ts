@@ -1,26 +1,22 @@
 import { useQuery } from '@vue/apollo-composable'
+import type { ProjectEntity } from '../../../entities/project/types'
 
-import { GET_FEATURED_PROJECTS } from '../graphql/projects.query'
+import { GET_FEATURED_PROJECTS, GET_PROJECTS } from '../graphql/projects.query'
 
-export type ProjectSummary = {
-  id: string
-  slug: string
-  title: string
-  description: string
-  content?: string | null
-  imageUrl?: string | null
-  githubUrl?: string | null
-  liveUrl?: string | null
-  featured?: boolean | null
-  startDate?: string | null
-  endDate?: string | null
-  technologies?: Array<{ name: string; slug: string }> | null
-}
+export type ProjectSummary = ProjectEntity
 
 export type ProjectsQueryResult = {
+  projects: ProjectSummary[]
+}
+
+export type FeaturedProjectsQueryResult = {
   featuredProjects: ProjectSummary[]
 }
 
 export function useProjects() {
-  return useQuery<ProjectsQueryResult>(GET_FEATURED_PROJECTS)
+  return useQuery<ProjectsQueryResult>(GET_PROJECTS)
+}
+
+export function useFeaturedProjects() {
+  return useQuery<FeaturedProjectsQueryResult>(GET_FEATURED_PROJECTS)
 }

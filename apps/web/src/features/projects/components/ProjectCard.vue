@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ProjectSummary } from '../composables/useProjects'
+import { formatProjectYear } from '../utils/dates'
 
 defineProps<{
   project: ProjectSummary
@@ -12,12 +13,8 @@ defineProps<{
     <div class="project-meta">
       <span>PROJECT {{ String(position).padStart(2, '0') }}</span>
       <time v-if="project.startDate" :datetime="project.startDate">
-        {{ new Date(project.startDate).getFullYear()
-        }}<template v-if="project.endDate">
-          –{{ new Date(project.endDate).getFullYear() }}
-        </template>
+        {{ formatProjectYear(project.startDate) }}
       </time>
-      <span v-else>DATE TBD</span>
     </div>
 
     <div class="project-body">
@@ -112,7 +109,7 @@ defineProps<{
   line-height: var(--line-height-label);
 }
 
-.project-meta span:last-child {
+.project-meta time:last-child {
   color: var(--color-warm);
   font-weight: var(--font-weight-semibold);
 }
