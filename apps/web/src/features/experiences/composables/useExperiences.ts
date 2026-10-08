@@ -1,25 +1,9 @@
 import { useQuery } from '@vue/apollo-composable'
-import { gql } from '@apollo/client/core'
 
-const GET_EXPERIENCES = gql`
-  query GetExperiences {
-    experiences {
-      slug
-      company
-      role
-      startDate
-      endDate
-    }
-  }
-`
+import type { ExperienceEntity } from '../../../entities/experience/types'
+import { GET_EXPERIENCES } from '../graphql/experiences.query'
 
-export type Experience = {
-  slug: string
-  company: string
-  role: string
-  startDate?: string | null
-  endDate?: string | null
-}
+export type Experience = ExperienceEntity
 
 export type ExperiencesQueryResult = {
   experiences: Experience[]

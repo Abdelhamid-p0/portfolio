@@ -2,6 +2,8 @@ export type ExperienceEntity = {
   slug: string
   company: string
   role: string
-  startDate?: string | null
+  description: string
+  startDate: string
   endDate?: string | null
+  current: boolean
 }

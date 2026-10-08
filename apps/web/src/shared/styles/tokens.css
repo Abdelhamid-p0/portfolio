@@ -12,6 +12,9 @@
   --font-size-project-tag: 0.75rem;
   --font-size-section-description: 0.6875rem;
   --font-section-description: var(--font-mono);
+  --font-size-experience-description: 0.8125rem;
+  --line-height-experience-description: 1.6923;
+  --experience-date-column: 12rem;
   --font-size-body: 1rem;
   --font-size-body-lg: 0.9375rem;
   --font-size-label: 0.625rem;
@@ -100,6 +103,8 @@
   --font-size-project-tag: 0.6875rem;
   --font-size-section-description: 0.875rem;
   --font-section-description: var(--font-sans);
+  --font-size-experience-description: 0.875rem;
+  --line-height-experience-description: 1.625;
   --font-size-label: 0.6875rem;
   --font-size-brand: 1rem;
   --font-size-body-lg: 1.125rem;

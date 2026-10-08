@@ -1,100 +1,142 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { RouterLink } from 'vue-router'
 
 import { useExperiences } from '../../features/experiences/composables/useExperiences'
+import ExperienceTimeline from '../../features/experiences/components/ExperienceTimeline.vue'
 
 const { result, loading, error } = useExperiences()
 const experiences = computed(() => result.value?.experiences ?? [])
+const previewExperiences = computed(() => experiences.value.slice(0, 2))
 </script>
 
 <template>
-  <section class="panel">
+  <section id="experience" class="experience-preview" aria-labelledby="experience-preview-title">
     <header class="section-header">
-      <p class="eyebrow">02 / Experience</p>
-      <h2>Experience</h2>
+      <div>
+        <p class="eyebrow">
+          <span class="eyebrow-dark">02 / Background</span>
+          <span class="eyebrow-light">02 / Background ─── ◈ ───</span>
+        </p>
+        <h2 id="experience-preview-title">Experience</h2>
+      </div>
+      <p class="section-description">
+        Professional internships, software engineering responsibilities, and distributed backend
+        achievements.
+      </p>
     </header>
 
-    <div v-if="loading" class="state">Loading experiences…</div>
-    <div v-else-if="error" class="state error">Error: {{ error.message }}</div>
-    <ul v-else class="timeline">
-      <li v-for="item in experiences" :key="item.slug" class="experience-item">
-        <div class="dot" />
-        <div>
-          <strong>{{ item.role }}</strong>
-          <p>{{ item.company }}</p>
-        </div>
-      </li>
-    </ul>
+    <div v-if="loading" class="state" role="status" aria-live="polite">
+      <span class="state-mark" aria-hidden="true"></span>
+      Loading experience…
+    </div>
+    <p v-else-if="error" class="state" role="alert">
+      Experience information is temporarily unavailable.
+    </p>
+    <p v-else-if="!experiences.length" class="state">No experience details are available yet.</p>
+    <ExperienceTimeline v-else :experiences="previewExperiences" />
+
+    <RouterLink class="all-experience-link" to="/experience">
+      View full experience <span aria-hidden="true">→</span>
+    </RouterLink>
   </section>
 </template>
 
 <style scoped>
-.panel {
-  padding: 3rem 0;
+.experience-preview {
+  padding-block: var(--layout-work-section-space);
   border-bottom: 1px solid var(--color-border);
+  scroll-margin-top: calc(var(--header-height) + var(--space-md));
 }
 
 .section-header {
-  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--layout-work-header-space);
 }
 
 .eyebrow {
-  margin: 0 0 0.5rem;
-  color: var(--color-accent);
+  margin: 0 0 var(--space-2xs);
+  color: var(--color-section-eyebrow);
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
+  font-size: var(--font-size-label-lg);
+  letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
 }
 
-h2 {
+.eyebrow-light {
+  display: none;
+}
+
+:global(:root[data-theme='light'] .eyebrow-dark) {
+  display: none;
+}
+
+:global(:root[data-theme='light'] .eyebrow-light) {
+  display: inline;
+}
+
+h2,
+h1 {
   margin: 0;
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  letter-spacing: -0.05em;
+  color: var(--color-heading);
+  font-size: var(--font-size-section-title);
+  font-weight: var(--font-weight-section-title);
+  line-height: var(--line-height-tight);
 }
 
-.timeline {
-  list-style: none;
+.section-description {
+  max-width: 28rem;
   margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 1rem;
-}
-
-.experience-item {
-  display: flex;
-  gap: 0.75rem;
-  align-items: flex-start;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 1rem;
-}
-
-.dot {
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  background: var(--color-accent);
-  margin-top: 0.3rem;
-}
-
-strong {
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
-p {
-  margin: 0;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
+  font-family: var(--font-section-description);
+  font-size: var(--font-size-section-description);
+  line-height: var(--line-height-body);
 }
 
 .state {
-  color: var(--color-text-muted);
+  display: flex;
+  min-height: 3rem;
+  align-items: center;
+  gap: var(--space-sm);
+  margin: 0;
+  color: var(--color-text-secondary);
   font-family: var(--font-mono);
+  font-size: var(--font-size-label-lg);
+  line-height: var(--line-height-body);
 }
 
-.state.error {
-  color: #ffb4ab;
+.state-mark {
+  width: 0.5rem;
+  height: 0.5rem;
+  flex: 0 0 auto;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+}
+
+.all-experience-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-lg);
+  color: var(--color-accent-strong);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-label-lg);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+}
+
+.all-experience-link:hover {
+  color: var(--color-accent);
+}
+
+@media (min-width: 48rem) {
+  .section-header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
 }
 </style>
