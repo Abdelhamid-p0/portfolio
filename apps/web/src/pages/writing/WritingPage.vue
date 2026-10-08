@@ -22,8 +22,13 @@ const posts = computed(() => result.value?.posts ?? [])
         </h1>
       </div>
       <p class="section-description">
-        <span class="description-dark">Things I build, break, learn and rethink. Engineering notes over generic tutorials.</span>
-        <span class="description-light">Things I build, break, learn and rethink. Thoughtful engineering notes over generic tutorials.</span>
+        <span class="description-dark"
+          >Things I build, break, learn and rethink. Engineering notes over generic tutorials.</span
+        >
+        <span class="description-light"
+          >Things I build, break, learn and rethink. Thoughtful engineering notes over generic
+          tutorials.</span
+        >
       </p>
     </header>
 
@@ -31,12 +36,8 @@ const posts = computed(() => result.value?.posts ?? [])
       <span class="state-mark" aria-hidden="true"></span>
       Loading writing…
     </div>
-    <p v-else-if="error" class="state" role="alert">
-      Writing is temporarily unavailable.
-    </p>
-    <p v-else-if="!posts.length" class="state">
-      No published writing is available yet.
-    </p>
+    <p v-else-if="error" class="state" role="alert">Writing is temporarily unavailable.</p>
+    <p v-else-if="!posts.length" class="state">No published writing is available yet.</p>
     <PostList v-else :posts="posts" filterable />
   </section>
 </template>

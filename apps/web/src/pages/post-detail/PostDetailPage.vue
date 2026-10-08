@@ -25,12 +25,8 @@ function formatDate(date: string) {
       <span class="state-mark" aria-hidden="true"></span>
       Loading article…
     </div>
-    <p v-else-if="error" class="state" role="alert">
-      This article is temporarily unavailable.
-    </p>
-    <p v-else-if="!post" class="state">
-      This article is unavailable or has not been published.
-    </p>
+    <p v-else-if="error" class="state" role="alert">This article is temporarily unavailable.</p>
+    <p v-else-if="!post" class="state">This article is unavailable or has not been published.</p>
     <template v-else>
       <RouterLink class="back-link" to="/writing">← Back to writing</RouterLink>
 

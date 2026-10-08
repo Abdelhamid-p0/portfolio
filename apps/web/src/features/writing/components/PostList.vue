@@ -32,14 +32,20 @@ const domainFilters = computed(() => {
 
 const visiblePosts = computed(() =>
   activeDomain.value
-    ? props.posts.filter((post) => post.domains.some((domain) => domain.slug === activeDomain.value))
+    ? props.posts.filter((post) =>
+        post.domains.some((domain) => domain.slug === activeDomain.value),
+      )
     : props.posts,
 )
 </script>
 
 <template>
   <div class="post-list-wrap">
-    <div v-if="filterable && posts.length" class="domain-filters" aria-label="Filter posts by domain">
+    <div
+      v-if="filterable && posts.length"
+      class="domain-filters"
+      aria-label="Filter posts by domain"
+    >
       <button
         class="domain-filter"
         :class="{ 'is-active': activeDomain === null }"
